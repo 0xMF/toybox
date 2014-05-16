@@ -11,3 +11,6 @@ So this file is being use to figure out the markdown syntax.
 Reference
 
 https://help.github.com/articles/writing-on-github
+
+
+Hey this emoji cheat sheet is really cool: http://www.emoji-cheat-sheet.com/
