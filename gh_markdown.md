@@ -52,3 +52,35 @@ Content Cell  | Content Cell
 | col 3 is      | some wordy text | $1600 |
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
+
+
+And now headings
+
+# The largest heading (h1)
+## The second largest heading (h2)
+…
+###### The 6th largest heading (h6)
+
+
+Blockquote 
+
+In the words of Abraham Lincoln:
+
+> Pardon my french
+
+Lists
+
+* Item with star
+* Item
+* Item
+
+- Item with dash
+- Item
+- Item
+
+
+Links
+
+[Visit GitHub!](www.github.com).
+
+
