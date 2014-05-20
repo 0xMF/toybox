@@ -10,11 +10,14 @@ Lists
 - Two
   * sub item
   * another sub item
-    .. sub sub item
-    .. sub sub item 2
+    . sub sub item
+    . sub sub item 2
+      .. sub x 3 item 1
+      .. sub x 3 item 2
+    . sub sub item 3
   * third sub item
   * fourth sub item
 - Three
 - Four
 
-AsciiDoc is from [AsciiDoc](https://asciidoc.org/)
+AsciiDoc is from http://asciidoc.org/[AsciiDoc]
