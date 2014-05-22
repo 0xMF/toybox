@@ -1,0 +1,19 @@
+0xMF Tech Logbook
+=================
+
+The purpose of this logbook is document and design forward stuff that I am doing and
+want to do in tech. The most recent item will be below this paragraph just so it's
+easy to read the latest thing I am working on at the moment.
+
+[[START]]
+
+2014-May-22 | git going
+-----------------------
+
+So I am back to learning Git with all it's attendant problems. I remember learning
+it earlier but now I am forced to relearn git so it works with GitHub. Really stoked
+that this toybox repository holds a captain's log. 
+
+This file started it's life from a FreeBSD 10.0 Oracle VirtualBox VM running on
+Windows 8.1. So today's task was to create this file +captain's_log.asciidoc+ and
+upload it to GitHub and correct any errors during the process. 
