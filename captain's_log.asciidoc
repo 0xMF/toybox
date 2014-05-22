@@ -1,11 +1,18 @@
-0xMF Tech Logbook
-=================
+Captain's Log
+-------------
 
-The purpose of this logbook is document and design forward stuff that I am doing and
-want to do in tech. The most recent item will be below this paragraph just so it's
-easy to read the latest thing I am working on at the moment.
+The purpose of this file is to log and design forward stuff I am doing and
+want to do that is tech-relatedq. The most recent item is below this paragraph
+so it's easy to read the latest thing I am working on at the moment.
 
 [[START]]
+
+2014-May-23 | AsciiDoc files in Sublime Text 2
+----------------------------------------------
+
+Installed https://github.com/SublimeText/AsciiDoc[AsciiDoc plugin for Sublime
+Text 2]. This required me to use .asc as the file extension but http://sublimetext.userecho.com/topic/211164-associated-file-extension-to-syntax/[this tip from Sven Axelsson] helped.
+
 
 2014-May-22 | git going
 -----------------------
