@@ -23,3 +23,5 @@ Lists
 AsciiDoc is from http://asciidoc.org/[AsciiDoc]
 
 Now testing *bold* and then 'italic' and finally *'bold italic'* or '*italic bold*'.
+
+So going to test cloning now
