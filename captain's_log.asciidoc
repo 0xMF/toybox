@@ -2,10 +2,24 @@ Captain's Log
 -------------
 
 The purpose of this file is to log and design forward stuff I am doing and
-want to do that is tech-relatedq. The most recent item is below this paragraph
+want to do that is tech-related. The most recent item is below this paragraph
 so it's easy to read the latest thing I am working on at the moment.
 
 [[START]]
+
+2014-May-24 | Forget not the push to remote
+-------------------------------------------
+
+So I updated git the local repository but forgot to push to origin thereby
+breaking the longest streak of 10 days. Things on the present TODO list
+
+  - Update remote with the latest packages
+  - Script, using powershell, so compiling and unit testing of scripts happen
+  - AsciiDoc plugin for ST2 appears to be broken for
+      * URLs not being highlighted
+      * List affect colors below the current paragraph
+
+
 
 2014-May-23 | AsciiDoc files in Sublime Text 2
 ----------------------------------------------
