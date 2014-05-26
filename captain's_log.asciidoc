@@ -11,9 +11,8 @@ so it's easy to read the latest thing I am working on at the moment.
 --------------------------------------------
 
 Updating +~/.bashrc+ and +~/.bash_profile+ to handle ssh-agent proved trickier
-than I expected. I used https://drupal.star.bnl.gov/STAR/blog-
-entry/jeromel/2009/feb/06/how-safely-start-ssh-agent-bashrc[these great tips
-on getting started with ssh-agent] but for some reason, I could not get
+than I expected. I used https://drupal.star.bnl.gov/STAR/blog-entry/jeromel/2009/feb/06/how-safely-start-ssh-agent-bashrc[these great tips
+on getting started with ssh-agent]  but for some reason, I could not get
 FreeBSD to automatically handle ssh-agent and ssh-add login time. I use tmux
 so starting a new tmux window either did not call ssh-agent, or if it did it
 called ssh-agent for 'every' tmux window thereby starting new instances of
