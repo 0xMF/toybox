@@ -56,17 +56,18 @@ contribute back.
 *I really like your content but not this display format. What should I do?*
 
 I understand that and I feel your pain too because when I signed up for
-GitHub. I, too, found the format and the structure overwhelming. Frankly
-needless to most end readers are not concerned about the surrounding icons,
-but the more I played around GitHub the more I understood how easy it would be
-for my work to be shared with others and for me to contribute back my work
-too.
+GitHub. I, too, found the format and the structure overwhelming. Frankly most
+end readers are not concerned about the icons surrounding this file (in this
+format), but the more I played around GitHub the more I understood how easy it
+would be for my work to be shared with others and for me to contribute back my
+work too.
 
-I use http://asciidoc.org[AsciiDoc] for my markup, and host a
-http://windows.microsoft.com/en-US/windows-8/meet[Windows 8.1] local
-http://virtualbox.org[VirtualBox] VM that runs http://freebsd.org[FreeBSD]. I
-communicate with the repo using http://www.sublimetext.com/[Sublime Text 2]
-and I edit using http://vim.org[vim].
+This file is written in http://asciidoc.org[AsciiDoc] markup, in a
+http://virtualbox.org[VirtualBox] VM that runs http://freebsd.org[FreeBSD].
+The FreeBSD VM is on http://windows.microsoft.com/en-US/windows-8/meet[Windows
+8.1] laptop. I communicate with the repo using
+http://www.sublimetext.com/[Sublime Text 2] and edit using
+http://vim.org[vim].
 
 All this means, I am still learning about good website design and till I get
 there, I thought I'd share my learning experiences along the way. This is my
