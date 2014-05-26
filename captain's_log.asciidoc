@@ -21,7 +21,7 @@ ssh-agent each time. Finally after many unsuccessful attempts I got it to work
 by doing this in my +~/.bash_profile+
 
 [source,sh]
----------------------------------------------
+-------------
 # Get PID of present ssh-agent and that stored on file
 SSH_AGENT_PID=`/usr/bin/tail -1 agent.sh|/usr/bin/cut -d";" -f1|/usr/bin/cut -d"=" -f2`
 AGENT_PID=`ps ax|/usr/bin/grep ssh-agent|/usr/bin/grep -v grep|cut -d" " -f1`
@@ -36,7 +36,7 @@ fi
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
-----------------------------------------
+-------------
 
 Interesting discussions on http://www.linuxfromscratch.org/blfs/view/6.3/postlfs/profile.html[Bash startup files]
 
