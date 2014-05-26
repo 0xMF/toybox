@@ -20,6 +20,12 @@ agent. I use:
 private key is stored. Since the actual location need not be published, I've
 left it out from the toybox repository.
 
+https://alpha.app.net/0xmf/post/31253044[Discussion to the reasoning for this
+setup on ADN]. Thanks to https://alpha.app.net/irc[@irc]
+https://alpha.app.net/mgrimes[@mgrimes] and
+https://alpha.app.net/ravisorg[@ravisorg] for helpful tips when getting all
+this setup.
+
 
 2014-May-26 | Captain's Log FAQ
 -------------------------------

@@ -18,7 +18,3 @@ if [ "$test" = "" ]; then
   /usr/bin/ssh-agent | $GREP -v echo >&$HOME/agent.sh
 
 fi;
-
-test -e $HOME/agent.sh && source $HOME/agent.sh
-
-alias kagent="kill -9 $SSH_AGENT_PID"
