@@ -7,6 +7,78 @@ so it's easy to read the latest thing I am working on at the moment.
 
 [[START]]
 
+2014-May-26 | Captain's Log FAQ
+-------------------------------
+
+*So why am I interested in reading this Captain's Log?* 
+
+Every day I try to do something new, or learn something new, or both in tech.
+I have been microblogging about my daily adventures in tech for a few years
+now. I went from 140 to 256 and enjoyed the process (I still do), but
+conversations on social media and my own thoughts on what I learned new that
+day started getting longer and longer and a bit unwieldy. For a long time I
+lived within the limitations of the medium I was using but it soon became
+apparent my rewriting was not being done to clarify my thoughts, instead I was
+rewriting to fit within the constraints of 140 and then later 256 character
+limit. I wanted to break out of that format and this my way of logging what I
+do daily in a much longer, and more organized format. 
+
+It would be easy, too, to quickly check this file to know what all is new with
+me. This is also my way of quickly going back to something I knew I solved
+before and finding an easy way to replicate the problem and solution.
+
+*But what about a blog, why not write a blog?*
+
+I thought about using a blog as a means of communicating, but in the end I
+decided I wanted to combine my daily struggles/learning/sharing at a
+microlevel with a dispersion model that wasn't tied to the reliability of the
+blog. I did not want my failings in getting a blog setup and tinkering around
+with it to disturb what the reader might want at that time. I am a tinkerer at
+heart and I love to try out new and sometimes unfinished things so having a
+blog depend on something that is likely to break would be unsustainable.
+
+I understand a lot of blog software comes canned and easy to install, but most
+of them do not suit my purposes with how I communicate with people who are
+interested in the tech stuff I do. I am not ruling out having a blog, but if I
+have a blog, it would in addition to this repo and this file. In case I have
+trouble with the website, I can update this log about what is going on...but
+that is in the distant, possibly unlikely, future.
+
+*Why GitHub?*
+
+I wanted to learn Git, make use of it on a daily basis, keep people who are
+interested in what I post on social media on my dev and admin stuff a place
+they can go to and grab stuff off. I am looking at making my online social
+media a lot more interactive as conversations from there have a focal point,
+besides I too wanted to fork and study some open source projects and possibly
+contribute back.
+
+*I really like your content but not this display format. What should I do?*
+
+I understand that and I feel your pain too because when I signed up for
+GitHub. I, too, found the format and the structure overwhelming. Frankly
+needless to most end readers are not concerned about the surrounding icons,
+but the more I played around GitHub the more I understood how easy it would be
+for my work to be shared with others and for me to contribute back my work
+too.
+
+I use http://asciidoc.org[AsciiDoc] for my markup, and host a
+http://windows.microsoft.com/en-US/windows-8/meet[Windows 8.1] local
+http://virtualbox.org[VirtualBox] VM that runs http://freebsd.org[FreeBSD]. I
+communicate with the repo using http://www.sublimetext.com/[Sublime Text 2]
+and I edit using http://vim.org[vim].
+
+All this means, I am still learning about good website design and till I get
+there, I thought I'd share my learning experiences along the way. This is my
+way of doing that.
+
+*My question has not been answered, what should I do?*
+
+Ask me on https://alpha.app.net/0xmf[App.Net] (also known as ADN) or on
+https://twitter.com/0xMF[Twitter]. I check ADN more frequently.
+
+
+
 2014-May-25 | ssh-agent and ssh-add at login
 --------------------------------------------
 
