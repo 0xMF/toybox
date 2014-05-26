@@ -62,7 +62,7 @@ format), but the more I played around GitHub the more I understood how easy it
 would be for my work to be shared with others and for me to contribute back my
 work too.
 
-This file is written in http://asciidoc.org[AsciiDoc] markup, in a
+This file is written in http://asciidoc.org[AsciiDoc] markup and it is in a
 http://virtualbox.org[VirtualBox] VM that runs http://freebsd.org[FreeBSD].
 The FreeBSD VM is on http://windows.microsoft.com/en-US/windows-8/meet[Windows
 8.1] laptop. I communicate with the repo using
