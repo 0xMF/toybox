@@ -1,0 +1,28 @@
+An AsciiDoc Testfile
+=====================
+
+Whoa! This is a test file for AsciiDoc and if it works then that would be awesome. So testing different stuff
+
+Lists
+-----
+
+- One 
+- Two
+  * sub item
+  * another sub item
+    . sub sub item
+    . sub sub item 2
+      *** sub x 3 item 1
+      *** sub x 3 item 2
+    . sub sub item 3
+  * third sub item
+  * fourth sub item
+- Three
+- Four
+
+AsciiDoc is from http://asciidoc.org/[AsciiDoc]
+
+Now testing *bold* and then 'italic' and finally *'bold italic'* or '*italic bold*'.
+
+So going to test cloning now
+This was added in the vm.
