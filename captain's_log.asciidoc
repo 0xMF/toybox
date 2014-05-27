@@ -13,8 +13,8 @@ so it's easy to read the latest thing I am working on at the moment.
 Just updated toybox with the files I use to add a private ssh key to ssh-
 agent. I use:
 
-+dotfiles/.bash_profile to check if ssh-agent is running, if not
-+dotfiles/.bash_profile calls +scripts/start_ssh-agent+
++dotfiles/.bash_profile+ to check if ssh-agent is running, if not
++dotfiles/.bash_profile+ calls +scripts/start_ssh-agent+
 
 +secrets+ directory contains settings as to where on my local file system my
 private key is stored. Since the actual location need not be published, I've
