@@ -7,8 +7,8 @@ so it's easy to read the latest thing I am working on at the moment.
 
 [[START]]
 
-2014-May-26 | Files needed to add a private key to ssh-agent
-------------------------------------------------------------
+2014-May-26 | Add a private key to ssh-agent 
+--------------------------------------------
 
 Just updated toybox with the files I use to add a private ssh key to ssh-
 agent. I use:
