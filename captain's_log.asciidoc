@@ -7,6 +7,12 @@ so it's easy to read the latest thing I am working on at the moment.
 
 [[START]]
 
+
+2014-Jul-23 | Lost passphrase
+-----------------------------
+
+It happened, I forgot my passphrase and had to recreate a new key.
+
 2014-May-26 | Add a private key to ssh-agent 
 --------------------------------------------
 
