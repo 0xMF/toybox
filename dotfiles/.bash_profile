@@ -1,8 +1,7 @@
-# .bash_profile / .zprofile
-# --------------------------
+# .bash_profile 
+# -------------
 
 KEY=$(/usr/bin/grep "^KEY" $HOME/.secrets/all_my_secrets|cut -d"=" -f2)
-print $KEY
 
 # Get PID of present ssh-agent and that stored on file
 SSH_AGENT_PID=`/usr/bin/tail -1 $HOME/agent.sh|/usr/bin/cut -d";" -f1|/usr/bin/cut -d"=" -f2`
@@ -21,6 +20,7 @@ if [ "$AGENT_PID" !=  "$SSH_AGENT_PID" ]; then
 fi 
 
 # call .bashrc for the rest of the stuff
-#if [ -f ~/.bashrc ]; then
-#	. ~/.bashrc
-#fi
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
