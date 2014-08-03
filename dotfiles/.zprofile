@@ -2,7 +2,6 @@
 # ----------
 
 KEY=$(/usr/bin/grep "^KEY" $HOME/.secrets/all_my_secrets|cut -d"=" -f2)
-LOG=~/agent.zsh
 
   ### START-Keychain ###
 
