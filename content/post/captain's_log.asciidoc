@@ -1,0 +1,174 @@
+Captain's Log
+-------------
+
+The purpose of this file is to log and design forward stuff I am doing and
+want to do that is tech-related. The most recent item is below this paragraph
+so it's easy to read the latest thing I am working on at the moment.
+
+[[START]]
+
+
+2014-Jul-23 | Lost passphrase
+-----------------------------
+
+It happened, I forgot my passphrase and had to recreate a new key.
+
+2014-May-26 | Add a private key to ssh-agent 
+--------------------------------------------
+
+Just updated toybox with the files I use to add a private ssh key to ssh-
+agent. I use:
+
++dotfiles/.bash_profile+ to check if ssh-agent is running, if not
++dotfiles/.bash_profile+ calls +scripts/start_ssh-agent+
+
++secrets+ directory contains settings as to where on my local file system my
+private key is stored. Since the actual location need not be published, I've
+left it out from the toybox repository.
+
+https://alpha.app.net/0xmf/post/31253044[Reasoning and discussion on this
+directory setup is on ADN]. Thanks to https://alpha.app.net/irc[@irc]
+https://alpha.app.net/mgrimes[@mgrimes] and
+https://alpha.app.net/ravisorg[@ravisorg] for helpful tips when getting all
+this setup.
+
+
+2014-May-26 | Captain's Log FAQ
+-------------------------------
+
+*So why am I interested in reading this Captain's Log?* 
+
+Every day I try to do something new, or learn something new, or both in tech.
+I have been microblogging about my daily adventures in tech for a few years
+now. I went from 140 to 256 and enjoyed the process (I still do), but
+conversations on social media and my own thoughts on what I learned new that
+day started getting longer and longer and a bit unwieldy. For a long time I
+lived within the limitations of the medium I was using but it soon became
+apparent my rewriting was not being done to clarify my thoughts, instead I was
+rewriting to fit within the constraints of 140 and then later 256 character
+limit. I wanted to break out of that format and this my way of logging what I
+do daily in a much longer, and more organized format. 
+
+It would be easy, too, to quickly check this file to know what all is new with
+me. This is also my way of quickly going back to something I knew I solved
+before and finding an easy way to replicate the problem and solution.
+
+*But what about a blog, why not write a blog?*
+
+I thought about using a blog as a means of communicating, but in the end I
+decided I wanted to combine my daily struggles/learning/sharing at a
+microlevel with a dispersion model that wasn't tied to the reliability of the
+blog. I did not want my failings in getting a blog setup and tinkering around
+with it to disturb what the reader might want at that time. I am a tinkerer at
+heart and I love to try out new and sometimes unfinished things so having a
+blog depend on something that is likely to break would be unsustainable.
+
+I understand a lot of blog software comes canned and easy to install, but most
+of them do not suit my purposes with how I communicate with people who are
+interested in the tech stuff I do. I am not ruling out having a blog, but if I
+have a blog, it would in addition to this repo and this file. In case I have
+trouble with the website, I can update this log about what is going on...but
+that is in the distant, possibly unlikely, future.
+
+*Why GitHub?*
+
+I wanted to learn Git, make use of it on a daily basis, keep people who are
+interested in what I post on social media on my dev and admin stuff a place
+they can go to and grab stuff off. I am looking at making my online social
+media a lot more interactive as conversations from there have a focal point,
+besides I too wanted to fork and study some open source projects and possibly
+contribute back.
+
+*I really like your content but not this display format. What should I do?*
+
+I understand that and I feel your pain too because when I signed up for
+GitHub. I, too, found the format and the structure overwhelming. Frankly most
+end readers are not concerned about the icons surrounding this file (in this
+format), but the more I played around GitHub the more I understood how easy it
+would be for my work to be shared with others and for me to contribute back my
+work too.
+
+This file is written in http://asciidoc.org[AsciiDoc] markup and it is in a
+http://virtualbox.org[VirtualBox] VM that runs http://freebsd.org[FreeBSD].
+The FreeBSD VM is on http://windows.microsoft.com/en-US/windows-8/meet[Windows
+8.1] laptop. I communicate with the repo using
+http://www.sublimetext.com/[Sublime Text 2] and edit using
+http://vim.org[vim].
+
+All this means, I am still learning about good website design and till I get
+there, I thought I'd share my learning experiences along the way. This is my
+way of doing that.
+
+*My question has not been answered, what should I do?*
+
+Ask me on https://alpha.app.net/0xmf[App.Net] (also known as ADN) or on
+https://twitter.com/0xMF[Twitter]. I check ADN more frequently.
+
+
+
+2014-May-25 | ssh-agent and ssh-add at login
+--------------------------------------------
+
+Updating +~/.bashrc+ and +~/.bash_profile+ to handle ssh-agent proved trickier
+than I expected. I used https://drupal.star.bnl.gov/STAR/blog-entry/jeromel/2009/feb/06/how-safely-start-ssh-agent-bashrc[these great tips
+on getting started with ssh-agent]  but for some reason, I could not get
+FreeBSD to automatically handle ssh-agent and ssh-add login time. I use tmux
+so starting a new tmux window either did not call ssh-agent, or if it did it
+called ssh-agent for 'every' tmux window thereby starting new instances of
+ssh-agent each time. Finally after many unsuccessful attempts I got it to work
+by doing this in my +~/.bash_profile+
+
+[source,sh]
+----------------------------------------------------------------------------------------
+# Get PID of present ssh-agent and that stored on file
+SSH_AGENT_PID=`/usr/bin/tail -1 agent.sh|/usr/bin/cut -d";" -f1|/usr/bin/cut -d"=" -f2`
+AGENT_PID=`ps ax|/usr/bin/grep ssh-agent|/usr/bin/grep -v grep|cut -d" " -f1`
+
+# compare, if different it means file version is old, so start ssh-agent
+if [ "$AGENT_PID" !=  "$SSH_AGENT_PID" ]; then
+  ~/bin/start_ssh-agent
+  # ssh-add key-to-add
+fi
+
+# call .bashrc for the rest of the stuff
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+----------------------------------------------------------------------------------------
+
+Interesting discussions on http://www.linuxfromscratch.org/blfs/view/6.3/postlfs/profile.html[Bash startup files]
+
+
+2014-May-24 | Forget not the push to remote
+-------------------------------------------
+
+So I updated git the local repository but forgot to push to origin thereby
+breaking the present longest streak of 10 days. Things on the present TODO
+list
+
+  - Update remote with the latest packages
+  - Script, using PowerShell, so compiling and unit testing of scripts happen
+  - AsciiDoc plugin for ST2 appears to be broken for
+      * URLs not being highlighted
+      * List affect colors below the current paragraph
+  - Enabled Sublime Text spell checking with F6, using tips from http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/[Rob Dodson] 
+
+
+2014-May-23 | AsciiDoc files in Sublime Text 2
+----------------------------------------------
+
+Installed https://github.com/SublimeText/AsciiDoc[AsciiDoc plugin for Sublime
+Text 2]. This required me to use .asc as the file extension but http://sublimetext.userecho.com/topic/211164-associated-file-extension-to-syntax/[this tip from Sven Axelsson] helped.
+
+
+2014-May-22 | git going
+-----------------------
+
+So I am back to learning Git with all it's attendant problems. I remember learning
+it earlier but now I am forced to relearn git so it works with GitHub. Really stoked
+that this toybox repository holds a captain's log. 
+
+This file started it's life from a FreeBSD 10.0 Oracle VirtualBox VM running on
+Windows 8.1. So today's task was to create this file +captain's_log.asciidoc+ and
+upload it to GitHub and correct any errors during the process. 
