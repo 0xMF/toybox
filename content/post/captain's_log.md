@@ -1,8 +1,8 @@
-[comment]: +++
+[//]: +++
 [//]: date = "2015-01-11T22:38:50-05:00"
 [//]: draft = true
 [//]: title = "captain's log"
-[comment]: +++
+[//]: +++
 
 2015-Jan-12 | Old scripts that work
 -----------------------------------
