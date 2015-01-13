@@ -1,6 +1,6 @@
 2015-Jan-13 | mystic theme for Hugo
 -----------------------------------
-First step in creating [Hugo](gohugo.io) theme. Changed default theme license from MIT to ISC. This
+First step in creating [Hugo](http://gohugo.io) theme. Changed default theme license from MIT to ISC. This
 will take time to shape up and I'll document each activity I do when I create the theme.
  
 2015-Jan-12 | Old scripts that work
