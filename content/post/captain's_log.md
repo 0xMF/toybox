@@ -1,9 +1,8 @@
-[//]: +++
-[//]: date = "2015-01-11T22:38:50-05:00"
-[//]: draft = true
-[//]: title = "captain's log"
-[//]: +++
-
+2015-Jan-13 | mystic theme for Hugo
+-----------------------------------
+First step in creating [Hugo](gohugo.io) theme. Changed default theme license from MIT to ISC. This
+will take time to shape up and I'll document each activity I do when I create the theme.
+ 
 2015-Jan-12 | Old scripts that work
 -----------------------------------
 So much of my time is spent on learning new stuff that often I'm just happy when something I wrote
