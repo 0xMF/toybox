@@ -13,6 +13,24 @@ to add 2 commits but I wanted the changes to be correctly split between the two 
 not happen and now I am stuck. I need to rebase and re-commit but I am stuck about how to go about
 this at the moment.
 
+_a few hours late_
+
+I managed to solve the problem, here's what I did:
+
+* created a branch (mystic)
+* rebased back to where I wanted to be before the incorrect commits
+* called `git add -p`
+* interactively added the lines I wanted
+* called `git commit -m` (*here's* where my mistake was last time, I had used `git commit -am`)
+* go back to master `git checkout master`
+* merged and resolved commits `git merge mystic`
+
+As a bonus, I managed to goof up again because I (foolishly, without understanding the consequences)
+did a `git rebase`, which pretty much overwrote all my commits and I went back to where I was before
+the merge. This meant I had to learn [`git
+reflog`](http://stackoverflow.com/questions/134882/undoing-a-git-rebase).
+
+
 2015-Jan-13 | mystic theme for Hugo
 -----------------------------------
 First step in creating [Hugo](http://gohugo.io) theme. Changed default theme license from MIT to ISC. This
