@@ -1,6 +1,7 @@
 Captain's Log
 =============
 
+<<<<<<< HEAD
 2015-Jan-15 | splitting a commit after updating master
 ------------------------------------------------------
 Yesterday I used 
@@ -13,6 +14,8 @@ to add 2 commits but I wanted the changes to be correctly split between the two 
 not happen and now I am stuck. I need to rebase and re-commit but I am stuck about how to go about
 this at the moment.
 
+=======
+>>>>>>> mystic
 2015-Jan-13 | mystic theme for Hugo
 -----------------------------------
 First step in creating [Hugo](http://gohugo.io) theme. Changed default theme license from MIT to ISC. This
