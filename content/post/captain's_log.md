@@ -1,6 +1,47 @@
 Captain's Log
 =============
 
+2015-Jan-16 | careful with git commit -a
+----------------------------------------
+I usually always used `git commit -a` when making commits, but `git commit -a` is problematic when
+using `git add -p` to slice and dice changes into separate commits. So the rule would be use `git
+commit -a` unless using `git add -p`. 
+
+List of git commands I've used so far (will update as I use more)
+
+```shell
+
+git add
+git add -p
+
+git branch
+
+git checkout
+
+git commit -am
+git commit -m
+
+git init
+
+git log --graph --decorate --pretty=oneline --abbrev-commit
+git log --graph --decorate --pretty=oneline --abbrev-commit --all
+
+git pull
+git push
+
+git rebase
+git reflog
+
+git reset
+git reset --hard
+
+git status
+git status -s
+git whatchanged -p --abbrev-commit --pretty=medium
+
+```
+
+
 2015-Jan-15 | splitting a commit after updating master
 ------------------------------------------------------
 Yesterday I used 
@@ -58,3 +99,5 @@ chmod +t test
 2015-Jan-11 | Hugo Static Site Builder 
 --------------------------------------
 I had to create a captain's log markdown file because Hugo does not accept AsciiDoc just yet.
+
+# vim: spell:ft=markdown
