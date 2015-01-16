@@ -1,7 +1,7 @@
 Captain's Log
 =============
 
-2015-Jan-13 | splitting a commit after updating master
+2015-Jan-15 | splitting a commit after updating master
 ------------------------------------------------------
 Yesterday I used 
 
