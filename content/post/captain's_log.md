@@ -13,17 +13,19 @@ to add 2 commits but I wanted the changes to be correctly split between the two 
 not happen and now I am stuck. I need to rebase and re-commit but I am stuck about how to go about
 this at the moment.
 
-_a few hours late_
+(_a few hours later_)
 
 I managed to solve the problem, here's what I did:
 
-* created a branch (mystic)
-* rebased back to where I wanted to be before the incorrect commits
-* called `git add -p`
-* interactively added the lines I wanted
-* called `git commit -m` (*here's* where my mistake was last time, I had used `git commit -am`)
-* go back to master `git checkout master`
-* merged and resolved commits `git merge mystic`
+* created a branch (`git branch mystic`)
+* rebased back to where I wanted to be before the incorrect commits (`git rebased HEAD^^`)
+* called `git add -p` to interactively stage the lines I wanted in each commit
+* called `git commit -m` (**here's where my mistake** was last time, I had (*incorrectly*) used `git commit -am`)
+* go back to branch master `git checkout master`
+* merged commit `git merge mystic`
+* I got a conflict so I used `git add` and `git commit` (no options) but it would have been better
+  to simply edit the file and remove out the conflicting portions (that were demarkated by tags for
+  master and mystic).
 
 As a bonus, I managed to goof up again because I (foolishly, without understanding the consequences)
 did a `git rebase`, which pretty much overwrote all my commits and I went back to where I was before
