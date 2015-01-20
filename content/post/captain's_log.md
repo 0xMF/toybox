@@ -1,6 +1,19 @@
 Captain's Log
 =============
 
+2015-Jan-19 | top
+------------------
+One of my FreeBSD virtual machines has rather high load averages (around 20% compared to typically
+0% on other Linux and FreeBSD servers), trying to figure out what causes that load is a tricky
+operation. Today I learned about `iotop` on Linux and 
+
+```shell
+top -mio -ototal 
+```
+on FreeBSD. This led me to discover that `devd` is probably causing the unusual load. Digging a bit
+deeper, I discovered `/etc/devd.conf`. Now I have to plumb through the different options to figure
+out which line from the 350+ lines is the problem. Fun times! 
+
 2015-Jan-16 | careful with git commit -a
 ----------------------------------------
 I usually always used `git commit -a` when making commits, but `git commit -a` is problematic when
