@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-Jan-22 | vnc
+-----------------
+
+For the first time ever, I've locked myself out of my remote VM. Luckily my provider let's me
+access the VM through VNC. Steps to remote in via VNC is underway...and will update on how the
+experience has been.
+
 2015-Jan-19 | top
 ------------------
 One of my FreeBSD virtual machines has rather high load averages (around 20% compared to typically
