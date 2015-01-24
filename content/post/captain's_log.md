@@ -1,6 +1,11 @@
 Captain's Log
 =============
 
+2015-Jan-24 | FreeBSD links
+---------------------------
+
+Linux and BSD have different [concepts of load averages](http://undeadly.org/cgi?action=article&sid=20090715034920). Also, a good (albeit dated for an old version of FreeBSD) resource for [FreeBSD performance tuning](http://serverfault.com/questions/64356/freebsd-performance-tuning-sysctls-loader-conf-kernel)
+
 2015-Jan-23 | vnc (update)
 --------------------------
 
