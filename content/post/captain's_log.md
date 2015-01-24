@@ -1,6 +1,19 @@
 Captain's Log
 =============
 
+2015-Jan-23 | vnc (update)
+--------------------------
+
+I managed to get vnc connectivity over ssh configured correctly from remmina. Big upside for
+me.
+
+A tip for all monitoring man pages installed:
+
+```shell
+man -k '*' | grep -E 'stat\((1|8)'
+```
+
+
 2015-Jan-22 | vnc
 -----------------
 
