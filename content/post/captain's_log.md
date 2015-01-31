@@ -1,6 +1,22 @@
 Captain's Log
 =============
 
+2015-Jan-31 | git stop tracking
+-------------------------------
+
+Today was the first time I wanted git to stop tracking a file, so I did this:
+
+```shell
+git update-index --assume-unchanged local.bash
+```
+
+To go back to tracking the same file again, I'll use:
+
+```shell
+git update-index --no-assume-unchanged local.bash
+```
+
+
 2015-Jan-24 | FreeBSD links
 ---------------------------
 
