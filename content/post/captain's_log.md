@@ -1,6 +1,17 @@
 Captain's Log
 =============
 
+2015-Feb-3 | Insert Key on Lenovo
+---------------------------------
+
+The Lenovo keyboard is missing a couple of keys:
+
+  Fn + B = Break
+  Fn + I = Insert
+  Fn + P = Pause
+  Fn + S = Scroll Lock
+
+
 2015-Jan-31 | git stop tracking
 -------------------------------
 
