@@ -6,10 +6,10 @@ Captain's Log
 
 The Lenovo keyboard is missing a couple of keys:
 
-  Fn + B = Break
-  Fn + I = Insert
-  Fn + P = Pause
-  Fn + S = Scroll Lock
+-  Fn + B = Break
+-  Fn + I = Insert
+-  Fn + P = Pause
+-  Fn + S = Scroll Lock
 
 
 2015-Jan-31 | git stop tracking
