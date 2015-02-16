@@ -28,6 +28,60 @@ func main() {
 		meta Meta
 	}
 
+	type HashTag struct {
+		len  int
+		name string
+		pos  int
+	}
+	type Link struct {
+		len  int
+		pos  int
+		text string
+		url  string
+	}
+	type Mention struct{}
+	type Entity struct {
+		hashtags []HashTag
+		links    []Link
+		mentions []Mention
+	}
+	type Source struct {
+		client_id string
+		link      string
+		name      string
+	}
+	type User struct {
+	}
+	type Location struct {
+		latitude  float32
+		longitude float32
+	}
+	type Annotation struct {
+		atype string // change later
+		value Location
+	}
+
+	type Post struct {
+		canonical_url string
+		created_at    string
+		entities      Entity
+		html          string
+		id            string
+		machine_only  bool
+		num_replies   int
+		num_reposts   int
+		num_stars     int
+		source        Source
+		text          string
+		thread_id     string
+		user          User
+		you_reposted  bool
+		you_starred   bool
+		annotations   []Annotation
+		reposters     []User
+		starred_by    []User
+	}
+
 	adn_global := "https://api.app.net/posts/stream/global"
 
 	res, err := http.Get(adn_global)
@@ -44,6 +98,6 @@ func main() {
 		} else if err != nil {
 			log.Fatal(err)
 		}
-    fmt.Printf("%+v\n", r)
+		fmt.Printf("%+v\n", r)
 	}
 }
