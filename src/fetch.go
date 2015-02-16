@@ -48,18 +48,18 @@ func main() {
 		Stars     int
 	}
 	type User struct {
-		Username         string
-		Avatar_Image     Image
-		User_Description Description `json:"description"`
-		Locale           string
-		Created_At       string
-		Canonical_Url    string
-		Cover_Image      Image
-		Timezone         string
-		Counts           Count
-		User_Type        string `json:"type"`
-		Id               string
-		Name             string
+		UserName      string      `json:"username"`
+		Avatar        Image       `json:"avatar"`
+		Profile       Description `json:"description"`
+		Locale        string
+		Created_At    string
+		Canonical_Url string
+		Cover         Image `json:"cover_image"`
+		Timezone      string
+		Counts        Count
+		Type          string `json:"type"`
+		Id            string
+		FullName      string `json:"name"`
 	}
 	type Location struct {
 		Latitude  float32
@@ -100,11 +100,11 @@ func main() {
 		Version    string
 	}
 	type Meta struct {
-		Min_Id      string `jsun: "min_id"`
-		Code        int    `json: "code"`
+		Min_Id      string `json:"min_id"`
+		Code        int    `json:"code"`
 		Meta_Marker Marker
-		Max_Id      string `json: "max_id"`
-		More        bool   `json: "more"`
+		Max_Id      string `json:"max_id"`
+		More        bool   `json:"more"`
 	}
 	type Response struct {
 		Meta Meta
@@ -124,5 +124,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%+v\n", r)
+	for _, p := range r.Data {
+		fmt.Printf("%s: %s\n", p.Post_User.UserName, p.Text)
+	}
 }
