@@ -1,3 +1,6 @@
+// fetch is a wrapper around package adn
+//
+// Gets Global feed from ADN (App.Net) and prints username and post text
 package main
 
 import (

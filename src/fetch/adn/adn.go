@@ -1,3 +1,4 @@
+// Package adn provides the data types and functions for interfacing with ADN (App.Net)
 package adn
 
 import (
