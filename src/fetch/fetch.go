@@ -8,36 +8,46 @@ import (
 	"fmt"
 	"github.com/boltdb/bolt"
 	"log"
+	"os"
 )
 
 func main() {
 
+	// Get Global posts
 	r, err := adn.GetGlobal()
 	if err != nil {
 		log.Fatal(err)
 	}
-	for _, p := range r.Data {
-		fmt.Printf("%s: %s\n", p.User.UserName, p.Text)
-	}
 
-	db, err := bolt.Open("/tmp/blog.db", 0600, nil)
+	// create new file (remove if exists)
+	var file = "/tmp/blog.db"
+	var bName = "posts"
+	os.Remove(file)
+
+	db, err := bolt.Open(file, 0600, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer db.Close()
 
-	db.Update(func(tx *bolt.Tx) error {
-		b, err := tx.CreateBucketIfNotExists([]byte("posts"))
-		if err != nil {
-			return err
-		}
-		return b.Put([]byte("0xMF"), []byte("Hey, it worked!"))
-	})
+	// store posts in file
+	for _, p := range r.Data {
+		db.Update(func(tx *bolt.Tx) error {
+			b, err := tx.CreateBucketIfNotExists([]byte(bName))
+			if err != nil {
+				return err
+			}
+			return b.Put([]byte(p.Created_At), []byte(p.User.UserName+p.Text))
+		})
+	}
 
+	// display again
 	db.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte("posts"))
-		v := b.Get([]byte("0xMF"))
-		fmt.Printf("that was: %s\n", v)
+		b := tx.Bucket([]byte(bName))
+		c := b.Cursor()
+		for k, v := c.First(); k != nil; k, v = c.Next() {
+			fmt.Printf("%s\n", v)
+		}
 		return nil
 	})
 }
