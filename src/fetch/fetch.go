@@ -4,7 +4,7 @@
 package main
 
 import (
-	//	"fetch/adn"
+	"fetch/adn"
 	"fmt"
 	"github.com/boltdb/bolt"
 	"log"
@@ -12,7 +12,15 @@ import (
 
 func main() {
 
-	db, err := bolt.Open("blog.db", 0600, nil)
+	r, err := adn.GetGlobal()
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, p := range r.Data {
+		fmt.Printf("%s: %s\n", p.User.UserName, p.Text)
+	}
+
+	db, err := bolt.Open("/tmp/blog.db", 0600, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -32,14 +40,4 @@ func main() {
 		fmt.Printf("that was: %s\n", v)
 		return nil
 	})
-
-	/*
-		r, err := adn.GetGlobal()
-		if err != nil {
-			log.Fatal(err)
-		}
-		for _, p := range r.Data {
-			fmt.Printf("%s: %s\n", p.User.UserName, p.Text)
-		}
-	*/
 }
