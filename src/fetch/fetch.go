@@ -11,17 +11,10 @@ import (
 	"os"
 )
 
-func main() {
+var file = "data/blog.db"
 
-	// Get Global posts
-	r, err := adn.GetGlobal()
-	if err != nil {
-		log.Fatal(err)
-	}
-
+func ToFrom(r adn.Response, file string) ([]string, error) {
 	// create new file (remove if exists)
-	var file = "/tmp/blog.db"
-	var bName = "posts"
 	os.Remove(file)
 
 	db, err := bolt.Open(file, 0600, nil)
@@ -30,24 +23,50 @@ func main() {
 	}
 	defer db.Close()
 
+	var bName = "posts"
 	// store posts in file
-	for _, p := range r.Data {
+  var items int
+	for it, p := range r.Data {
 		db.Update(func(tx *bolt.Tx) error {
 			b, err := tx.CreateBucketIfNotExists([]byte(bName))
 			if err != nil {
 				return err
 			}
-			return b.Put([]byte(p.Created_At), []byte(p.User.UserName+p.Text))
+			return b.Put([]byte(p.Id), []byte(p.User.UserName+p.Text))
 		})
+    items=it+1
 	}
+  fmt.Printf("%d items stored\n", items)
 
+	var values []string
+  items=0
 	// display again
-	db.View(func(tx *bolt.Tx) error {
+	err = db.View(func(tx *bolt.Tx) error {
 		b := tx.Bucket([]byte(bName))
 		c := b.Cursor()
 		for k, v := c.First(); k != nil; k, v = c.Next() {
-			fmt.Printf("%s\n", v)
+			values = append(values, string(v[:]))
+      items++
 		}
 		return nil
 	})
+  fmt.Printf("%d items retrieved\n", items)
+
+	return values, err
+}
+
+func main() {
+	// Get Global posts
+	r, err := adn.GetGlobal()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	results, err := ToFrom(r, file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, v := range results {
+		fmt.Printf("%s\n", v)
+	}
 }
