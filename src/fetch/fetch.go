@@ -4,14 +4,73 @@
 package main
 
 import (
+  "database/sql"
 	"fetch/adn"
 	"fmt"
 	"github.com/boltdb/bolt"
+_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
 )
 
 var file = "data/blog.db"
+
+func ToFromSqlite(r adn.Response, file string)([]string, error) {
+
+  os.Remove(file)
+	db, err := sql.Open("sqlite3", file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	sqlStmt := `
+	create table posts (id integer not null primary key, user text, post text);
+	delete from posts;
+	`
+	_, err = db.Exec(sqlStmt)
+	if err != nil {
+		log.Printf("%q: %s\n", err, sqlStmt)
+		return nil, err
+	}
+
+	tx, err := db.Begin()
+	if err != nil {
+		log.Fatal(err)
+	}
+	stmt, err := tx.Prepare("insert into posts(id, user, post) values(?, ?, ?)")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer stmt.Close()
+	for it, p := range r.Data {
+		_, err = stmt.Exec(it, p.User.UserName, p.Text)
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	tx.Commit()
+
+	rows, err := db.Query("select id, user, post from posts")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer rows.Close()
+	var values []string
+	var items = 0
+	for rows.Next() {
+		var id int
+		var user string
+		var post string
+		rows.Scan(&id, &user, &post)
+		values = append(values, string(id)+user+post)
+		items++
+	}
+	rows.Close()
+	fmt.Printf("%d items retrieved\n", items)
+
+	return values, err
+}
 
 func check_error_status(err error) {
 	if err != nil {
@@ -64,7 +123,8 @@ func main() {
 	r, err := adn.GetGlobal()
 	check_error_status(err)
 
-	results, err := ToFrom(r, file)
+	//results, err := ToFrom(r, file)
+	results, err := ToFromSqlite(r, file)
 	check_error_status(err)
 
 	for _, v := range results {

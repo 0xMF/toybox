@@ -12,6 +12,17 @@ func TestGlobalData(t *testing.T) {
 	}
 }
 
+func TestToFromSqlite(t *testing.T) {
+	r, _ := adn.GetGlobal()
+	res, err := ToFromSqlite(r, "data/blog_test.db")
+	if len(res) == 0 || err != nil {
+		t.Error("Expected result, got nil")
+	}
+	if len(r.Data) != len(res) {
+		t.Error("Returned ADN results and persistence store returned aren't the same", len(r.Data), len(res))
+	}
+}
+
 func TestToFrom(t *testing.T) {
 	r, _ := adn.GetGlobal()
 	res, err := ToFrom(r, "data/blog_test.db")
