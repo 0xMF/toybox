@@ -15,13 +15,20 @@ import (
 
 var file = "data/blog.db"
 
+func check_error_status(err error, args ...string) {
+	if err != nil {
+		log.Fatal(err)
+	}
+	if len(args) > 0 {
+		log.Printf("%q: %s\n", err, args)
+	}
+}
+
 func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 
 	os.Remove(file)
 	db, err := sql.Open("sqlite3", file)
-	if err != nil {
-		log.Fatal(err)
-	}
+	check_error_status(err)
 	defer db.Close()
 
 	sqlStmt := `
@@ -29,32 +36,21 @@ func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 	delete from posts;
 	`
 	_, err = db.Exec(sqlStmt)
-	if err != nil {
-		log.Printf("%q: %s\n", err, sqlStmt)
-		return nil, err
-	}
+	check_error_status(err, sqlStmt)
 
 	tx, err := db.Begin()
-	if err != nil {
-		log.Fatal(err)
-	}
+	check_error_status(err)
 	stmt, err := tx.Prepare("insert into posts(id, user, post) values(?, ?, ?)")
-	if err != nil {
-		log.Fatal(err)
-	}
+	check_error_status(err)
 	defer stmt.Close()
 	for it, p := range r.Data {
 		_, err = stmt.Exec(it, p.User.UserName, p.Text)
-		if err != nil {
-			log.Fatal(err)
-		}
+		check_error_status(err)
 	}
 	tx.Commit()
 
 	rows, err := db.Query("select id, user, post from posts")
-	if err != nil {
-		log.Fatal(err)
-	}
+	check_error_status(err)
 	defer rows.Close()
 	var values []string
 	var items = 0
@@ -63,7 +59,8 @@ func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 		var user string
 		var post string
 		rows.Scan(&id, &user, &post)
-		values = append(values, string(id)+user+post)
+		fmt.Println(id, user, post)
+		values = append(values, "@"+user+": "+post)
 		items++
 	}
 	rows.Close()
@@ -72,13 +69,7 @@ func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 	return values, err
 }
 
-func check_error_status(err error) {
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
-func ToFrom(r adn.Response, file string) ([]string, error) {
+func ToFromBolt(r adn.Response, file string) ([]string, error) {
 	// create new file (remove if exists)
 	os.Remove(file)
 
@@ -95,7 +86,7 @@ func ToFrom(r adn.Response, file string) ([]string, error) {
 			if err != nil {
 				return err
 			}
-			return b.Put([]byte(p.Id), []byte(p.User.UserName+p.Text))
+			return b.Put([]byte(p.Id), []byte("@"+p.User.UserName+": "+p.Text))
 		})
 		items = it + 1
 	}
@@ -123,7 +114,7 @@ func main() {
 	r, err := adn.GetGlobal()
 	check_error_status(err)
 
-	//results, err := ToFrom(r, file)
+	//results, err := ToFromBolt(r, file)
 	results, err := ToFromSqlite(r, file)
 	check_error_status(err)
 

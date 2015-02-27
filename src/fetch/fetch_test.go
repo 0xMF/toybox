@@ -23,9 +23,9 @@ func TestToFromSqlite(t *testing.T) {
 	}
 }
 
-func TestToFrom(t *testing.T) {
+func TestToFromBolt(t *testing.T) {
 	r, _ := adn.GetGlobal()
-	res, err := ToFrom(r, "data/blog_test.db")
+	res, err := ToFromBolt(r, "data/blog_test.db")
 	if len(res) == 0 || err != nil {
 		t.Error("Expected result, got nil")
 	}
