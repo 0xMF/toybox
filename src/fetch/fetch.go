@@ -4,20 +4,20 @@
 package main
 
 import (
-  "database/sql"
+	"database/sql"
 	"fetch/adn"
 	"fmt"
 	"github.com/boltdb/bolt"
-_ "github.com/mattn/go-sqlite3"
+	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
 )
 
 var file = "data/blog.db"
 
-func ToFromSqlite(r adn.Response, file string)([]string, error) {
+func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 
-  os.Remove(file)
+	os.Remove(file)
 	db, err := sql.Open("sqlite3", file)
 	if err != nil {
 		log.Fatal(err)
