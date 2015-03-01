@@ -40,9 +40,11 @@ func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 
 	tx, err := db.Begin()
 	check_error_status(err)
+
 	stmt, err := tx.Prepare("insert into posts(id, user, post) values(?, ?, ?)")
 	check_error_status(err)
 	defer stmt.Close()
+
 	for it, p := range r.Data {
 		_, err = stmt.Exec(it, p.User.UserName, p.Text)
 		check_error_status(err)
@@ -111,14 +113,27 @@ func ToFromBolt(r adn.Response, file string) ([]string, error) {
 }
 
 func main() {
-	r, err := adn.GetGlobal()
-	check_error_status(err)
 
-	//results, err := ToFromBolt(r, file)
-	results, err := ToFromSqlite(r, file)
-	check_error_status(err)
+	rchan := make(chan adn.Response)
 
-	for _, v := range results {
-		fmt.Printf("%s\n", v)
-	}
+	go func() {
+		r, err := adn.GetGlobal()
+		check_error_status(err)
+		rchan <- r
+	}()
+
+	go func() {
+		//results, err := ToFromBolt(r, file)
+		r := <-rchan
+		results, err := ToFromSqlite(r, file)
+		check_error_status(err)
+
+		for _, v := range results {
+			fmt.Printf("%s\n", v)
+		}
+	}()
+
+	fmt.Printf("Press any key to continue...")
+	var input string
+	fmt.Scanln(&input)
 }
