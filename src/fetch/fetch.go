@@ -1,6 +1,7 @@
-// fetch is a wrapper around package adn
-//
-// Gets Global feed from ADN (App.Net) and prints username and post text
+// Copyright 2015, Mark Fernandes. All rights reserved.
+// Use of this source code is governed by a ISC-style
+// license that can be found in the LICENSE file.
+
 package main
 
 import (
