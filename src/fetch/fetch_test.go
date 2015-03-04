@@ -22,14 +22,3 @@ func TestToFromSqlite(t *testing.T) {
 		t.Error("Returned ADN results and persistence store returned aren't the same", len(r.Data), len(res))
 	}
 }
-
-func TestToFromBolt(t *testing.T) {
-	r, _ := adn.GetGlobal()
-	res, err := ToFromBolt(r, "data/blog_test.db")
-	if len(res) == 0 || err != nil {
-		t.Error("Expected result, got nil")
-	}
-	if len(r.Data) != len(res) {
-		t.Error("Returned ADN results and persistence store returned aren't the same", len(r.Data), len(res))
-	}
-}

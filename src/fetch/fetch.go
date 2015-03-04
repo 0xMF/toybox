@@ -8,7 +8,6 @@ import (
 	"database/sql"
 	"fetch/adn"
 	"fmt"
-	"github.com/boltdb/bolt"
 	_ "github.com/mattn/go-sqlite3"
 	"log"
 	"os"
@@ -72,47 +71,6 @@ func ToFromSqlite(r adn.Response, file string) ([]string, error) {
 	return values, err
 }
 
-func ToFromBolt(r adn.Response, file string) ([]string, error) {
-	// create new file (remove if exists)
-	os.Remove(file)
-
-	db, err := bolt.Open(file, 0600, nil)
-	check_error_status(err)
-	defer db.Close()
-
-	// store posts in file
-	var bName = "posts"
-	var items int
-	for it, p := range r.Data {
-		db.Update(func(tx *bolt.Tx) error {
-			b, err := tx.CreateBucketIfNotExists([]byte(bName))
-			if err != nil {
-				return err
-			}
-			return b.Put([]byte(p.Id), []byte("@"+p.User.UserName+": "+p.Text))
-		})
-		items = it + 1
-	}
-	fmt.Printf("%d items stored\n", items)
-
-	var values []string
-	items = 0
-
-	// display again
-	err = db.View(func(tx *bolt.Tx) error {
-		b := tx.Bucket([]byte(bName))
-		c := b.Cursor()
-		for k, v := c.First(); k != nil; k, v = c.Next() {
-			values = append(values, string(v[:]))
-			items++
-		}
-		return nil
-	})
-	fmt.Printf("%d items retrieved\n", items)
-
-	return values, err
-}
-
 func main() {
 
 	rchan := make(chan adn.Response)
@@ -124,7 +82,6 @@ func main() {
 	}()
 
 	go func() {
-		//results, err := ToFromBolt(r, file)
 		r := <-rchan
 		results, err := ToFromSqlite(r, file)
 		check_error_status(err)
