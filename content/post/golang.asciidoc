@@ -1,0 +1,28 @@
+:language: Go
+
+Notes on learning Go
+--------------------
+
+(This file contains my haphazard notes to learning Go, expect it to change frequently and randomy as
+my understanding of Go improves).
+
+Differences with object oriented programming
+--------------------------------------------
+
+Go differs from OOP in the following ways:
+
+  - no inheritance 
+  - no parametric substitutuion
+
+The no inheritance problem is solved by creating smaller types and embedding them in others
+
+////
+[source]
+--------------
+
+--------------
+////
+
+The no parametric substitution problem is solved with interfaces. The way Go solves this is unique,
+and does require rethinking on how the issue of type genericity can be solved in a simple,
+minimalistic, working, and future-friendly manner.
