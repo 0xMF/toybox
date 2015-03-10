@@ -1,6 +1,18 @@
 Captain's Log
 =============
 
+2015-Mar-9 | Narrowing
+----------------------
+
+I sometimes struggle with staying focused on the task at hand, because my mind and interests -
+especially in tech - go far and wide. I've decided to do the following to help me stay focussed:
+
+- Keep a pen and paper near my desk for notes for TODOs
+- Occasionally when taking a break sort the notes
+- Ruthlessly stay focused on the task at hand.
+
+Let's track this over a period of time.
+
 2015-Feb-3 | Insert Key on Lenovo
 ---------------------------------
 
