@@ -1,14 +1,24 @@
 Captain's Log
 =============
 
-2015-Mar-9 | nginx
-------------------
+2015-Mar-20 to 21 | nginx
+-------------------------
 
 Having decided to use nginx as a server on FreeBSD, these are the initial files I needed to know
 about:
 
   /usr/local/etc/nginx => location of nginx conf files
   /usr/local/www => location of website files
+
+
+Immediately noticed scripts hunting for 'admin' and other known weak links... so I decided to block
+them using [access control with nginx](http://www.cyberciti.biz/faq/linux-unix-nginx-access-control-howto/) and this simple one-liner:
+
+```shell
+grep admin nginx-error.log | awk -F':' '{ print $6 }' | sed 's/ \(.*\),\(.*\)/deny \1;/' | sort >> nginx/blockips.conf
+```
+
+Not perfect, but it is a start.
 
 
 2015-Mar-9 | Narrowing
