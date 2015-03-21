@@ -1,6 +1,16 @@
 Captain's Log
 =============
 
+2015-Mar-9 | nginx
+------------------
+
+Having decided to use nginx as a server on FreeBSD, these are the initial files I needed to know
+about:
+
+  /usr/local/etc/nginx => location of nginx conf files
+  /usr/local/www => location of website files
+
+
 2015-Mar-9 | Narrowing
 ----------------------
 
