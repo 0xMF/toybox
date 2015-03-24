@@ -1,7 +1,7 @@
 Captain's Log
 =============
 
-2015-Mar-20 to 21 | nginx
+2015-Mar-20 to 22 | nginx
 -------------------------
 
 Having decided to use nginx as a server on FreeBSD, these are the initial files I needed to know
@@ -19,6 +19,9 @@ grep admin nginx-error.log | awk -F':' '{ print $6 }' | sed 's/ \(.*\),\(.*\)/de
 ```
 
 Not perfect, but it is a start.
+
+Attempting to jail nginx, using ezjail but have not been too successful this far. An initial
+[reference](http://blog.shatow.net/post/2013-11-27-sandboxing-php-part2.markdown) for further steps.
 
 
 2015-Mar-9 | Narrowing
