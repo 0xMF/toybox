@@ -1,7 +1,7 @@
 Captain's Log
 =============
 
-2015-Mar-20 to 22 | nginx
+2015-Mar-20 to 23 | nginx
 -------------------------
 
 Having decided to use nginx as a server on FreeBSD, these are the initial files I needed to know
@@ -22,6 +22,11 @@ Not perfect, but it is a start.
 
 Attempting to jail nginx, using ezjail but have not been too successful this far. An initial
 [reference](http://blog.shatow.net/post/2013-11-27-sandboxing-php-part2.markdown) for further steps.
+
+The biggest problem I had was to get networking going on in the jail. There was no way of
+connecting to the Internet, until I realized my IP number that I was using was incorrect (it was
+a local IP) when I should've been using an external facing IP. After I did that and connected the
+nameserver (via /etc/resolv.conf). I was in business. [Dan Langille's](http://dan.langille.org/2013/12/23/accessing-freebsd-jails-over-openvpn/) post on jails was the tipping point for me. Now that I have Internet connectivity within the jail, I'm ok.
 
 
 2015-Mar-9 | Narrowing
