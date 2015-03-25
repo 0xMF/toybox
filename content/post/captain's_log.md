@@ -1,6 +1,23 @@
 Captain's Log
 =============
 
+2015-Mar-25 | jails
+-------------------
+
+Here is how I setup jails with Internet connectivity. Much of the posts deal with setting up a jail
+but do not have instructions on getting Internet connectivity in the jail, so after struggling for
+a bit, these instructions should help (and be reproducible):
+
+1. Check Internet-facing ip, on iterface em0 (assuming em0 is the Internet-facing interface), with:
+```shell
+ifconfig em0
+```
+ observe the ipv4 and ipv6 values
+
+2. Follow instructions on creating the jail, with the caveat being to use the ip address got from step 1 using [FreeBSD Handbook](https://www.freebsd.org/doc/en/books/handbook/jails-ezjail.html). An example of such is shown in [Dan Langille's](http://dan.langille.org/2013/12/23/accessing-freebsd-jails-over-openvpn/) post on jails.
+
+3. Copy the nameserver values from the host to jail's `/etc/resolv.conf`
+
 2015-Mar-20 to 23 | nginx
 -------------------------
 
