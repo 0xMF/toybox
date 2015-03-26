@@ -1,6 +1,35 @@
 Captain's Log
 =============
 
+2015-Mar-26 | FreeBSD man pages advice
+--------------------------------------
+
+Running
+
+```shell
+/usr/share/games/fortune freebsd-tips
+```
+
+and a bit of examples like `grep -C+3 "security" /usr/share/games/fortune/freebsd-tips*` helped me
+unearth this treasure trove
+
+```
+Useful man pages recommended by /usr/games/fortune freebsd-tips
+
+man boot0cfg  # repair damage to MBR caused by other OSes
+
+man firewall  # advice on building a FreeBSD firewall
+man hier      # the way FreeBSD systems are laid out
+
+man intro     # 1:General 2:System calls 3:C libs 4:Device drivers
+              # 5:File formats 6:Games 7:Misc 8 Sysadmin, 9 Kernel
+
+man ports     # installing FreeBSD ports
+man security  # advice on securing FreeBSD system
+man tuning    # advice on performance tuning a FreeBSD system
+```
+
+
 2015-Mar-25 | jails
 -------------------
 
