@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2015-Mar-27 | nginx load balancing
+----------------------------------
+
+Next step is [load balancing using nginx](http://blog.jsdelivr.com/2013/01/nginx-load-balancing-basics.html). This will be interesting to combine nginx with proxy and other web servers.
+
+
 2015-Mar-26 | FreeBSD man pages advice
 --------------------------------------
 
