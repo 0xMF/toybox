@@ -1,6 +1,15 @@
 Captain's Log
 =============
 
+2015-Mar-28 | nginx blocking
+----------------------------
+
+I have been forced to learn a bit of `tcsh` scripting. This is a simple script that I wrote:
+
+1. look at the `nginx-errors.log` file and grab all ips and the link requested
+2. add these ips to the block list
+3. restart `nginx`
+
 2015-Mar-27 | nginx load balancing
 ----------------------------------
 
