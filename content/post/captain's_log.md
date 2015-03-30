@@ -1,6 +1,21 @@
 Captain's Log
 =============
 
+2015-Mar-30 | nginx load balancing
+----------------------------------
+
+Successful at doing load balancing. These were the critical steps:
+
+1. Create an `upstream` block in `nginx.conf`. Populate it with servers that will be handling
+   requests. The [proxying configuration examples on the nginx](http://wiki.nginx.org/Configuration) are necessary and sufficient. Reading through the first few links were enough for me.
+
+2. Create an `server` block in `nginx.conf` if using a single site configuration. Each server
+   should be listening on a port other than port 80. It's best to have at least two servers (one
+   acts as a backup) besides load balancing means sharing of load so a minimum of two would be
+   expected.
+
+3. Test and reload. That should be about it.
+
 2015-Mar-28 | nginx blocking
 ----------------------------
 
