@@ -1,6 +1,11 @@
 Captain's Log
 =============
 
+2015-Mar-31 | Setting up an ezjail
+----------------------------------
+
+Some more good advice [on setting up ezjail](https://www.secure-computing.net/wiki/index.php/FreeBSD_jails_with_ezjail) I liked the configurations for `/etc/rc.conf` and `/etc/periodic.conf`. All good settings, some of which I did not find reference to elsewhere.
+
 2015-Mar-30 | nginx load balancing
 ----------------------------------
 
