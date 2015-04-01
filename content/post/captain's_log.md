@@ -1,6 +1,18 @@
 Captain's Log
 =============
 
+2015-Apr-1 | Setting up 0xMF
+----------------------------
+
+So I have a bunch of markup files, that render with Hugo, the static file generator written in Go. I
+now want to move this to my production site. This involves integrating with my existing jail
+setup and is running behind nginx routing.
+
+Wow, just this simple thing alone is proving to be a challenge. Fortunately, the fallback
+mechanism I setup earlier just works out of the box.
+
+This might be resolved quickly, or who knows ... take a lot of time!
+
 2015-Mar-31 | Setting up an ezjail
 ----------------------------------
 
