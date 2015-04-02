@@ -1,6 +1,14 @@
 Captain's Log
 =============
 
+2015-Apr-2 | Setting up 0xMF
+----------------------------
+
+Instantly after posting my previous edit, I decided to change the theme used by Hugo and voilà the
+site renders somewhat correctly.  
+
+Now for a few things that do not render correctly...and that might take a while.  
+
 2015-Apr-1 | Setting up 0xMF
 ----------------------------
 
