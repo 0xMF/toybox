@@ -1,6 +1,45 @@
 Captain's Log
 =============
 
+2015-Apr-5 | False positives
+----------------------------
+
+Weird false positive bug with valgrind on Ubuntu 14.04
+
+```shell
+$ g++ --version|head -1
+g++ (Ubuntu 4.9.2-0ubuntu1~14.04) 4.9.2
+
+$ cat leak.cpp
+#include <iostream>
+int main(int argc, char* argv[]){}
+```
+
+compiling with `g++ -std=c++0x -Wall` and running with ` valgrind --leak-check=full --show-leak-kinds=all a.out 2>leaky` gives
+
+```shell
+HEAP SUMMARY:
+  in use at exit: 72,704 bytes in 1 blocks
+  total heap usage: 1 allocs, 0 frees, 72,704 bytes allocated
+
+  72,704 bytes in 1 blocks are still reachable in loss record 1 of 1
+  at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+  by 0x4EC0DDF: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+  by 0x4010139: call_init.part.0 (dl-init.c:78)
+  by 0x4010222: _dl_init (dl-init.c:36)
+  by 0x4001309: ??? (in /lib/x86_64-linux-gnu/ld-2.19.so)
+
+LEAK SUMMARY:
+  definitely lost: 0 bytes in 0 blocks
+  indirectly lost: 0 bytes in 0 blocks
+  possibly lost: 0 bytes in 0 blocks
+  still reachable: 72,704 bytes in 1 blocks
+  suppressed: 0 bytes in 0 blocks
+```
+
+Keeping my eye on this one.
+
+
 2015-Apr-2 | Setting up 0xMF
 ----------------------------
 
