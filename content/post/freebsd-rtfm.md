@@ -1,3 +1,4 @@
+```shell
 Useful man pages recommended by /usr/games/fortune freebsd-tips
 
 man boot0cfg  # repair damage to MBR caused by other OSes
@@ -32,3 +33,4 @@ sockstat(1)              - list open sockets
 stat(1), readlink(1)     - display file status
 systat(1)                - display system statistics
 vmstat(8)                - report virtual memory statistics
+```
