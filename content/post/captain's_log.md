@@ -20,7 +20,7 @@ was the straw that broke me:
   - output and errors redirected to file is: cmd >& err
 ```
 
-Fortunately, @ibarra has a [FreeBSD port](https://github.com/ibara/oksh) which compiled and
+Fortunately, @ibara has a [FreeBSD port](https://github.com/ibara/oksh) which compiled and
 installed on FreeBSD and in the ezjail.
 
 
