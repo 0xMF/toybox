@@ -1,6 +1,29 @@
 Captain's Log
 =============
 
+2015-Apr-7 | Moving to ksh
+--------------------------
+
+I got frustrated with FreeBSD default shell (tcsh) handling of command line redirection, and then
+after reading [Ellie Quigley's
+book](http://www.pearsoned.co.uk/bookshop/detail.asp?item=100000000073401), I discovered why I got
+frustrated with tcsh: it's the way tcsh does IO redirection compared to others, for example this one
+was the straw that broke me:
+
+```shell
+# in sh/bash/ksh
+ - command errors redirected to a file is: cmd 2>err
+ - output and errors redirected to file is:  cmd > file 2>&1
+
+# in tcsh the equivalents for each are
+  - command errors redirected to a file is: (cmd > /dev/tty) >& err
+  - output and errors redirected to file is: cmd >& err
+```
+
+Fortunately, @ibarra has a [FreeBSD port](https://github.com/ibara/oksh) which compiled and
+installed on FreeBSD and in the ezjail.
+
+
 2015-Apr-5 | False positives
 ----------------------------
 
