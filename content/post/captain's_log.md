@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2015-Apr-9 | Broken streak
+--------------------------
+
+My longest streak of 95 days pushing something to GH, even if it was a small change, was just broken. It might
+be time to becoming a paying member because the new ideas I have are best kept private.
+
 2015-Apr-7 | Moving to ksh
 --------------------------
 
