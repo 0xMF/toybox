@@ -1,6 +1,22 @@
 Captain's Log
 =============
 
+2015-Apr-10 | Pushing Prod
+--------------------------
+
+I was successfully able to install git in my jail without needing to install Perl in my jail environment.
+Here's what I did:
+
+* installed git in the non-jail part of the server
+* copied the git binaries over
+* ran ldd on the git binaries and made sure to copy the dependent libs over as well
+* next I copied from /usr/local/libexec/git-core
+
+It's not the complete install of git and keeping up-to-date will mean I manually need to repeat these
+steps but I'm going to see how this works for now.
+
+...and oh, if this get's pushed to GH then all steps have worked!
+
 2015-Apr-9 | Broken streak
 --------------------------
 
