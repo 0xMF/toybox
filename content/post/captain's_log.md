@@ -1,6 +1,27 @@
 Captain's Log
 =============
 
+2015-Apr-11 | Daily Distractions
+--------------------------------
+
+Being distracted from what I want to do is a continuous battle I fight with on a daily basis. This
+is made worse when I want to move ahead in some tech area but cannot either because I do not
+have the skill set I need, or I am entrenched with a problem I want to solve, for example:
+yesterday (Sunday) I literally spent the entire day working on Makefiles because I wanted to have
+just one makefile on Linux (gmake) and BSD (bsd make). The syntax is similar but they do not even
+agree on how to implement conditional statements. Finally I cracked and split the logic I was
+having a hard time with into two
+platform specific files. The gmake portion was much more approachable since I had already
+done my time with learning gmake a long time back. BSD make, however, proved to be a completely
+different beast from gmake (and nmake: Microsoft's archaic build tool). A simple task like trying
+to figure out if a line was in a file or not took up all my time yesterday (all 16 hrs that is).
+Finally dropped to sleep exhausted and then when I awoke at around 3:30 am (local time) I gave
+it another grind through. Finally something clicked (possibly by accident, or my prayers were
+finally answered) and I managed to move on from what was essentially a one-liner in a
+platform-specific make file.
+
+Why do I even bother anymore.
+
 2015-Apr-11 | Makefiles
 -----------------------
 
