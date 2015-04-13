@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-Apr-11 | Makefiles
+-----------------------
+
+What a mess Makefiles are, especially since I want to keep one makefile on multiple systems, and,
+no, Windows is not involved. This was simply GNU make and BSD make.
+
+
 2015-Apr-10 | Pushing Prod
 --------------------------
 
