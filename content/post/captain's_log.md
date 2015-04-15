@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-Apr-14 | Scripting
+-----------------------
+
+One advantage to knowing shell scripting is the relative ease at which so many Unix utilities can be put
+together to create something useful, and serves a purpose. Never mind if the intended recipient
+of the purpose is me. The added bonus to my script today was that I was able to call an old and already useful script from the new script I wrote.
+
 2015-Apr-11 | Daily Distractions
 --------------------------------
 
