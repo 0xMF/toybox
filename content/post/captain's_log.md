@@ -1,6 +1,19 @@
 Captain's Log
 =============
 
+2015-Apr-14 | Scripted Attacks
+------------------------------
+
+Noticed my site is now in the secondary stages of being attacked. The first is the usual set
+of scripts which every site gets, these scripts have no underlying knowledge of the site they
+attempt to attack. The next stage is looking for specific content based on some knowledge about
+the website. This is where my site is right now. Log file activity indicates scripted attacks
+are now coming in based on my site's content.
+
+Fortunately, I'm using a jail within FreeBSD but there are still steps I could take to make my
+setup a bit less vulnerable than it is at the moment. If the attack activity steps up, I might be
+forced to lock down that next level of defense.
+
 2015-Apr-14 | Scripting
 -----------------------
 
