@@ -1,6 +1,28 @@
 Captain's Log
 =============
 
+2015-Apr-17 | awk and shell
+---------------------------
+
+A peculiar problem with calling awk from a shell function, say I define a function that uses awk to
+format something like this:
+
+```shell
+$bawk() { awk '{print $1",",$0}'; }
+$echo How are you?|bawk Mark
+How, How are you?
+```
+I need to change the awk in the shell function to
+
+```shell
+$ myawk() { awk -v name=$1 '{print name",",$0}'; }
+$ echo How are you?|myawk Mark
+Mark, How are you?
+````
+
+`awk -v` lets me create my own variables which are very useful in this situation.
+
+
 2015-Apr-14 | Scripted Attacks
 ------------------------------
 
