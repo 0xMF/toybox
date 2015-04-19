@@ -1,6 +1,21 @@
 Captain's Log
 =============
 
+2015-Apr-17 | which is where
+----------------------------
+
+I constantly keep getting confused between `/bin/grep` or `/usr/bin/grep` and other such utilities
+(or shells). Why? I switch from OSes so much on a daily basis and I have my `grep` aliased to `grep
+--color=always -i` but ever so often, I'd like to further process the output match from my aliased
+grep into something else (like sed or awk). The trouble is due to the colorizations my output from
+grep now has the ansi color codes mixed in. This always trips me up initially but I've got better
+about this so I recover quickly. It's the having to do the next step that is annoying. Namely
+figuring out where grep is installed on the system I'm logged in. Of course I could create another
+non-color alias or have create a soft-link somewhere earlier in my path (so it's portable across
+systems) but that's like covering up the problem than solving it.
+
+The real issue is why can't /bin and /usr/bin be consistent across all Unix-based systems?
+
 2015-Apr-17 | awk and shell
 ---------------------------
 
