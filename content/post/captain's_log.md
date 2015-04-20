@@ -1,7 +1,38 @@
 Captain's Log
 =============
 
-2015-Apr-17 | which is where
+2015-Apr-19 | stingy sed
+----------------------------
+
+sed is greedy, by default, to make it stingy try putting '?' before the *
+
+```shell
+# greedy match basic regular expressions
+$ echo a_b_c|sed  's/\(.*\)_\(.*\)/\1/'
+a_b
+
+# non-greedy (stingy) match basic regular expressions
+$ echo a_b_c|sed  's/\(.?*\)_\(.*\)/\1/'
+a
+
+```
+A slight change is needed for extended regular expressions
+
+```shell
+# greedy match extended regular expressions
+$ echo a_b_c|sed  -r 's/(.*)_(.*)/\1/'
+a_b
+
+# non-greedy (stingy) match extended regular expressions
+$ echo a_b_c|sed  -r 's/(.\?*)_(.*)/\1/'
+a
+
+```
+
+This works on Ubuntu and on FreeBSD. BSD's have their own conservative versions of sed that have
+subtle differences with GNU sed in some respects.
+
+2015-Apr-18 | which is where
 ----------------------------
 
 I constantly keep getting confused between `/bin/grep` or `/usr/bin/grep` and other such utilities
