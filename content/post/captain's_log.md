@@ -1,6 +1,20 @@
 Captain's Log
 =============
 
+2015-Apr-21 | Write, Edit, and Re-edit
+--------------------------------------
+
+A pattern of working I'm thinking of using is as follows:
+
+  * write in morning
+  * edit in the evening
+  * re-edit the next day
+
+I'll keep my tinkering around as before, but at least I'll mentally have prepared a map of my
+daily workflow.
+
+Let's work with this for now.
+
 2015-Apr-20 | Habits and Communities
 ------------------------------------
 
