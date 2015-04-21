@@ -6,14 +6,14 @@ Captain's Log
 
 Since January of this year, I tried to make at least one GitHub push per day on something technical.
 It was possible, initially, to wake up each morning and write something that covered activities of
-the previous day but the problems started when I kept tinkering around with was not fixed on one
-particular subject. Sometimes it would be programming, other times it would be shell scripting,
-still other times pushing my dotfiles to GH. On days I had something to push, progress seemed
-effortless. Days rolled into weeks and I was really happy with my progress. Then, slowly, the ideas
-and experimentation started drying up, I began to run out things to push to GH each morning. So I
-started allowing myself to put it off that morning activity until I got back from work in the
-evening. This pattern of working sometimes in the day, or at night, continued for several weeks, and
-I kept swinging between day and night pushes to GitHub.
+the previous day but problems started when the subject matter I kept tinkering around with was not
+fixed on one particular area. Sometimes it would be programming, other times it would be shell
+scripting, still other times it was pushing my dotfiles to GH. On days I had something to push,
+progress seemed effortless. Days rolled into weeks and I was really happy with my progress. Then,
+slowly, the ideas and experimentation started drying up, I began to run out things to push to GH
+each morning. So I started allowing myself to put off that morning activity until I got back from
+work that evening. This pattern of working sometimes in the day, or at night, continued for
+several weeks, and I kept swinging between day and night pushes to GitHub.
 
 Then one morning I woke up and realized I had not pushed to GH the previous day. My work habits had
 ruined my workflow. I was mentally stuck too, because immediately after that 'missed day' I happened
