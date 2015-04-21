@@ -1,8 +1,40 @@
 Captain's Log
 =============
 
+2015-Apr-20 | Habits and Communities
+------------------------------------
+
+Since January of this year, I tried to make at least one GitHub push per day on something technical.
+It was possible, initially, to wake up each morning and write something that covered activities of
+the previous day but the problems started when I kept tinkering around with was not fixed on one
+particular subject. Sometimes it would be programming, other times it would be shell scripting,
+still other times pushing my dotfiles to GH. On days I had something to push, progress seemed
+effortless. Days rolled into weeks and I was really happy with my progress. Then, slowly, the ideas
+and experimentation started drying up, I began to run out things to push to GH each morning. So I
+started allowing myself to put it off that morning activity until I got back from work in the
+evening. This pattern of working sometimes in the day, or at night, continued for several weeks, and
+I kept swinging between day and night pushes to GitHub.
+
+Then one morning I woke up and realized I had not pushed to GH the previous day. My work habits had
+ruined my workflow. I was mentally stuck too, because immediately after that 'missed day' I happened
+to miss yet another day a week later.
+
+While I lamented about this fact on my preferred social media platform: App.Net, [Pam
+Davis](http://pamdavis.com/) kept encouraging me on. I was pleasantly surprised to learn that Pam,
+too, had been doing something similar (writing a blog post each day) from January. Knowing Pam
+maintained an unbroken link of making a blog post each day from January till today reinvigorated me
+to look at how I did things and wonder if I could do something different.
+
+Will I be able to continue that unbroken link from now on? I don't know and, in a sense, I've moved
+past the I-must-do-something-each-day checkbox towards trying to establish a pattern that can fit
+into my daily schedule at the start of the day and to have something I can roll over to the next
+day, meaning, I could publish what I did today, tomorrow instead of trying to do everything on the
+same day. In case you were wondering, I got that tip from Pam. It will take a few days to adjust to
+this newer thought pattern but it helps knowing there are others who like me are working toward
+their own goals yet are kind enough to encourage me on.
+
 2015-Apr-19 | stingy sed
-----------------------------
+------------------------
 
 sed is greedy, by default, to make it stingy try putting '?' before the *
 
