@@ -1,6 +1,18 @@
 Captain's Log
 =============
 
+2015-Apr-21 | Learning
+----------------------
+
+How do we learn (specifically programming or system administration) in the age of the Internet and access to instant solutions to the problem we
+face at the moment. The solutions are available for free on sites that are sometimes supported
+through ad-revenue.
+
+Despite the common think that people no longer need a 'human teacher', I think, being a human
+teacher myself, the need for a human teacher is all the more necessary. There are still so many
+social, psychological, and yes even spiritual, aspects to the learning process that can never be
+fully replaced with technology or AI.
+
 2015-Apr-21 | Write, Edit, and Re-edit
 --------------------------------------
 
