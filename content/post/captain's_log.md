@@ -1,6 +1,25 @@
 Captain's Log
 =============
 
+2015-Apr-23 | remote gvim
+-------------------------
+
+Today's tip is tremendously useful yet surprisingly simple. To open several files in an already open
+instance of gvim use:
+
+```shell
+gvim --remote-tab-silent `find $HOME/.*rc`
+
+# if you have the following alias in your shell rc file
+alias gv='gvim --remote-tab-silent'
+
+# then, this is enough
+gv `find $HOME/.*rc`
+
+```
+
+Neat. Huh?
+
 2015-Apr-21 | Learning
 ----------------------
 
