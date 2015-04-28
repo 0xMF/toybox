@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2015-Apr-27 | Janitorial Duties
+-------------------------------
+
+Some amount of janitorial work is necessary to have an efficient workflow. Alas, I discovered this
+too late. I'm hoping I can rectify this going forward.
+
 2015-Apr-23 | remote gvim
 -------------------------
 
