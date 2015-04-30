@@ -5,9 +5,7 @@ Captain's Log
 ------------------------------------
 
 This is a simple test of running VS in Ubuntu after getting to know that it was released at //build2015. Wow.
-Currently testing the .git features.
-
-
+Currently testing the .git features....and it works! *WOW!!*
 
 2015-Apr-27 | Janitorial Duties
 -------------------------------
