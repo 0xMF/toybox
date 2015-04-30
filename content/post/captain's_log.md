@@ -1,6 +1,14 @@
 Captain's Log
 =============
 
+2015-Apr-29 | VisualStudio on Ubuntu
+------------------------------------
+
+This is a simple test of running VS in Ubuntu after getting to know that it was released at //build2015. Wow.
+Currently testing the .git features.
+
+
+
 2015-Apr-27 | Janitorial Duties
 -------------------------------
 
