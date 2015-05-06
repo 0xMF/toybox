@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-May-07 | Reflections
+-------------------------
+
+Starting a new file called [reflections](relections.asciidoc) based on bullet point lessons I
+learned recently.
+
+
 2015-Apr-29 | VisualStudio on Ubuntu
 ------------------------------------
 
