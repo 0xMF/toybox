@@ -1,3 +1,4 @@
 - Moves blocked off can't be made
 - Look past the exchanges
 - Always seek mate rather than exchange
+- Stay focused on a task, avoid changing midstream
