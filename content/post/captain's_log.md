@@ -1,6 +1,21 @@
 Captain's Log
 =============
 
+2015-May-08 | git on Windows
+----------------------------
+
+After a long time, I am back to using Windows for development. This means an upgrade to:
+
+  - git 
+  - vim
+  - conemu
+  - cygwin
+
+If this push goes through then I know all my settings on Windows worked correctly. I had to jump
+through a lot of hoops since my existing ssh keys did not work so I had to recreate new ones and
+upload them to GitHub.
+
+
 2015-May-07 | Reflections
 -------------------------
 
