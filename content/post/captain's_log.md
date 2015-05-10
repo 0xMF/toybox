@@ -13,7 +13,21 @@ After a long time, I am back to using Windows for development. This means an upg
 
 If this push goes through then I know all my settings on Windows worked correctly. I had to jump
 through a lot of hoops since my existing ssh keys did not work so I had to recreate new ones and
-upload them to GitHub.
+upload them to GitHub. The command to generate the keys was influenced by [stribika](https://stribika.github.io/2015/01/04/secure-secure-shell.html) and it was similar to:
+
+ssh-keygen -t rsa -b 4096 -o -a 100 -C (your email address to associate with the key)
+
+The other problem was getting my private key to be remembered, instead of having to add it each
+time. The way around that was solved with a helpful blog post from [Ryan Lanciaux](http://ryanlanciaux.github.io/blog/2014/05/15/running-ssh-agent-on-windows/). I installed cygwin and started up bash, then
+
+```shell
+eval `ssh-agent`
+ssh-add
+```
+
+If you're seeing this, then you know it worked!
+
+
 
 
 2015-May-07 | Reflections
