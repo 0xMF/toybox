@@ -25,7 +25,29 @@ eval `ssh-agent`
 ssh-add
 ```
 
-If you're seeing this, then you know it worked!
+If you're seeing this, then you know it worked! That did, but it brought up another host of
+problems, namely every new shell that got created started a new instance of ssh-agent. The solution
+around this, eventually came [from GitHub itself](https://help.github.com/articles/working-with-ssh-key-passphrases/#platform-windows). 
+
+There was a slight tweak I had to make to remove superfluous errors, like these:
+
+```shell
+bash: $'\r': command not found
+bash: $'\r': command not found
+bash: $'\r': command not found
+
+
+# in the given functions I changed
+agent_load_env() {
+    . "$env" >/dev/null
+}
+
+# to ignore error output
+agent_load_env() {
+    . "$env" 2>/dev/null
+}
+
+```
 
 
 
