@@ -1,6 +1,34 @@
 Captain's Log
 =============
 
+2015-May-11 | Texapp on Windows
+-------------------------------
+
+I successfully got Texapp (0.6.10) to install and work correctly on Windows. Here's what I did:
+
+  1. installed Cygwin
+  2. from the Cygwin setup itself I installed Perl (5.14):
+    * perl
+    * perl-base
+    * perl-pods
+    * Perl-Term-ReadKey
+    * Perl-WWW-Curl
+    * Perl-Win32
+    * Perl-YAML
+    * Perl-JSON-PP
+    * Perl-CPAN-\*
+  3. from CPAN I updated and reloaded cpan then I installed Term::ReadLine::TTYtter
+  4. installed Texapp
+
+Not all of the above might be needed but after fouling up my Perl installation once, the only way to
+recover was to recreate another Cygwin install. Please note, I also have msysgit installed, which
+comes with it's own Cygwin Perl (5.8) and utilities needed to get git running. So, yes, this means
+there are two cygwin installations.
+
+The biggest downside to this process was the audio bell beeping, which I could only get rid of by
+turning the [Default Bell sound off on
+Windows](http://www.7tutorials.com/how-disable-system-beep-windows-7). 
+
 2015-May-08 | git on Windows
 ----------------------------
 
