@@ -21,7 +21,7 @@ IE11 on Windows:
 Caveats
 
   * Avoid running from a shared sub-folder. So, if you have a folder ```C:\share``` to share with
-    other users or other operating systems do not clone ```nice_social`` within ```C:\share```
+    other users or other operating systems do not clone ```nice_social``` within ```C:\share```
     otherwise additional steps to configure your set up maybe involved. You could, however, clone
     within a sub-folder of ```C:\share``` and then configure ```C:\nice_social``` or
     ```C:\inetput\nice_social``` as remote to ```C:\share``` thereby using your existing setup with
