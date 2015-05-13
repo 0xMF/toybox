@@ -20,13 +20,38 @@ IE11 on Windows:
 
 Caveats
 
-  * Avoid running from a shared sub-folder. So, if you have a folder ```C:\share``` to share with
-    other users or other operating systems do not clone ```nice_social``` within ```C:\share```
-    otherwise additional steps to configure your set up maybe involved. You could, however, clone
-    within a sub-folder of ```C:\share``` and then configure ```C:\nice_social``` or
-    ```C:\inetput\nice_social``` as remote to ```C:\share``` thereby using your existing setup with
-    multiple operating sytems and still have a Windows test machine available for testing
-    nice_social with IE11.
+  * Avoid creating an IIS virtual directory within a VirtualBox shared sub-folder. So, if you
+    have a VirtualBox shared folder ```C:\share\repos``` that you use to share with other operating
+    systems do not make ```c:\share\repos\nice_social``` an IIS website otherwise additional steps to
+    configure your set up maybe involved. You could, however, clone nice_social within a sub-folder
+    of ```C:\inetpub``` and configure ```C:\inetpub\nice_social``` as remote of
+    ```C:\share\repos\nice_social``` thereby using your existing setup with multiple operating
+    sytems and having a Windows test machine available for testing nice_social with IE11.
+
+Upon further testing I discovered another problem. My current setup is as follows:
+
+```
+c:\share\repos\nice_social  <= dev folder shared with Ubuntu VM 
+c:\inetpub\nice_social      <= windows production
+
+# C:\share\repos\nice_social
+git remote -v
+origin  git@github.com:0xMF/nice_social.git (fetch)
+origin  git@github.com:0xMF/nice_social.git (push)
+upstream        git@github.com:matigo/nice_social.git (fetch)
+upstream        git@github.com:matigo/nice_social.git (push)
+win     c:\inetpub\nice_social (fetch)
+win     c:\inetpub\nice_social (push)
+```
+
+The trouble is: I could not do a ```git push win``` from within ```c:\share\repos\nice_social``` to
+```c:\inetpub\nice_social``` until I did a [git config --local receive.denyCurrentBranch
+updateInstead]((http://stackoverflow.com/questions/2816369/git-push-error-remote-rejected-master-master-branch-is-currently-checked)
+when in ```c:\inetpub\nice_social```
+
+To be sure I also added my user to have permissions (Full Control) in ```c:\inetpub\nice_social```.
+More testing is still needed to check whether the additional (full control) permissions were really
+necessary.
 
 
 2015-May-11 | Texapp on Windows
