@@ -1,6 +1,34 @@
 Captain's Log
 =============
 
+2015-May-13 | nice_social and IE11
+----------------------------------
+
+This is what I did to get [nice_social](https://github.com/matigo/nice_social) to work with
+IE11 on Windows:
+
+  * Clone the repo (assume ```C:\nice_social``` or ```C:\inetpub\nice_social```)
+  * [Create a virtual directory](https://support.microsoft.com/en-us/kb/172138) using [IIS Manager](https://msdn.microsoft.com/en-us/library/bb763170(v=vs.140).aspx)
+  * You might have to configure nice_social to work from a port other than 80 if that has already
+    been used by another site (assume ```8080```)
+  * Right click on the folder, go to the **Security** tab and add user ```IIS_IUSRS```.
+  * Give the following permission to ```IIS_IUSRS```
+    - Read
+    - Read and execute
+    - List folder contents
+  * Open up IE11 and browse ```http:\\localhost:8080```
+
+Caveats
+
+  * Avoid running from a shared sub-folder. So, if you have a folder ```C:\share``` to share with
+    other users or other operating systems do not clone ```nice_social`` within ```C:\share```
+    otherwise additional steps to configure your set up maybe involved. You could, however, clone
+    within a sub-folder of ```C:\share``` and then configure ```C:\nice_social``` or
+    ```C:\inetput\nice_social``` as remote to ```C:\share``` thereby using your existing setup with
+    multiple operating sytems and still have a Windows test machine available for testing
+    nice_social with IE11.
+
+
 2015-May-11 | Texapp on Windows
 -------------------------------
 
