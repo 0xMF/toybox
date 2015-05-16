@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-May-15 | reveal.js and pandoc
+----------------------------------
+
+WHOAH! Now, I know why the cool kids use reveal.js and pandoc. Sadly, I am still figuring out the
+syntax needed to create the slides that reveal.js runs and when I figure that you, it will be my
+next post.
+
 2015-May-13 | nice_social and IE11
 ----------------------------------
 
