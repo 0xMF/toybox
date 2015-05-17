@@ -1,6 +1,25 @@
 Captain's Log
 =============
 
+2015-May-16 | reveal.js and pandoc
+----------------------------------
+
+Spent a lot time over reveal.js and pandoc. reveal.js certainly simplifies presentations without
+needing external apps. Got a browser with JavaScript enabled, then you've got a presentation. Here
+are some shortcuts for reveal.js
+
+  Up/Down/Right/Left  arrows work as expected
+  . toggles           dark/light on current slide
+  ESC                 brings up the (alternate) navigation window
+  F                   toggles full screen
+  s                   toggles speaker notes
+
+Other goodies:
+
+  - The given sample stylesheets are easy to customize too.
+  - Appending ?print-pdf puts all the slides into one long webpage which can be printed to PDF in
+    Chrome using settings: Layout:Landscape; Margins:None; Pages:All 
+
 2015-May-15 | reveal.js and pandoc
 ----------------------------------
 
