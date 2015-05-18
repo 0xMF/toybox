@@ -4,3 +4,4 @@
 - Stay focused on a task, avoid changing midstream
 - When the end is known (problem is solved), it's easy for someone else to figure out the solution
   too. The hard part is the first crack at arriving at the solution.
+- The move unconsidered might have been the better one.
