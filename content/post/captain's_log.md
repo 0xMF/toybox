@@ -1,6 +1,21 @@
 Captain's Log
 =============
 
+2015-May-16 | More love for pandoc
+----------------------------------
+
+I started to use pandoc regularly, even started to learn it's own markdown syntax. Configured vim
+with vim-pandoc syntax highlighting. The depth and breadth of output that can be generated from one
+(pandoc markdown) source document is incredible. I am using
+
+  * revealjs to make slides
+  * odt/docx for creating docx/odt files from source
+  * pdf/epub (haven't tried this yet but will do so soon)
+
+The only regret I have this far is the limited support pandoc uses for AsciiDoc input. In fact there
+is no input support for AsciiDoc files (as is), however, pandoc can write to AsciiDoc but I have not
+tried that yet.
+
 2015-May-16 | reveal.js and pandoc
 ----------------------------------
 
