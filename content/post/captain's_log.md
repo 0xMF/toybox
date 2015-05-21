@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2015-May-21 | Entity Framework Exceptions
+-----------------------------------------
+
+Gah! EF problems with scaffolding. Tired. Nuff said.
+
+
 2015-May-20 | More love for pandoc
 ----------------------------------
 
