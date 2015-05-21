@@ -1,6 +1,41 @@
 Captain's Log
 =============
 
+2015-May-20 | More love for pandoc
+----------------------------------
+
+Here's the batch file I use for creating revealjs slides
+
+```batchfile
+@echo off
+
+@set REPOS=path\to\repo
+@set DATA=%REPOS%\pandoc
+@set CSS_THEME=%DATA%\css\some_theme.css
+@set SLIDE_TYPE=revealjs
+
+@set EXTENSIONS=markdown+^
+definition_lists+^
+escaped_line_breaks+^
+example_lists+^
+fancy_lists+^
+fenced_code_attributes+^
+fenced_code_blocks+^
+grid_tables+^
+line_blocks+^
+markdown_in_html_blocks+^
+multiline_tables+^
+pandoc_title_block+^
+pipe_tables+^
+raw_html+^
+simple_tables+^
+startnum+^
+table_captions+^
+yaml_metadata_block
+
+pandoc -f %EXTENSIONS% -c %CSS_THEME% -t %SLIDE_TYPE% --self-contained -o %~n1.html %*
+```
+
 2015-May-16 | More love for pandoc
 ----------------------------------
 
