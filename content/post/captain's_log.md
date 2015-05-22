@@ -1,6 +1,13 @@
 Captain's Log
 =============
 
+2015-May-22 | pandoc and MiKTeX
+-------------------------------
+
+Yup, I gave in and installed MiKTeX, so now there is no need for me to boot into that Ubuntu VM (at
+least for the next several weeks) as all my tools work on Windows.
+
+
 2015-May-21 | Entity Framework Exceptions
 -----------------------------------------
 
@@ -812,4 +819,6 @@ chmod +t test
 --------------------------------------
 I had to create a captain's log markdown file because Hugo does not accept AsciiDoc just yet.
 
-# vim: spell:ft=markdown
+<!--
+# vim: spell:ft=markdown:tw=100
+-->
