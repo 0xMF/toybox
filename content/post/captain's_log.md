@@ -1,6 +1,15 @@
 Captain's Log
 =============
 
+2015-May-23 | AsciiDoc (LaTeX) on Cygwin
+----------------------------------------
+
+Successfully imported shell scripts to generate PDFs with my custom LaTeX settings under Cygwin. It
+was a pain to get some dblatex macros to work with my settings so I commented them out. Fortunately
+for the work I'm doing it doesn't seem to have made a difference and the test files I used to
+recreate the PDF documents worked fine.
+
+
 2015-May-22 | pandoc and MiKTeX
 -------------------------------
 
