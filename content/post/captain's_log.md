@@ -1,6 +1,21 @@
 Captain's Log
 =============
 
+2015-May-23 | Color and text settings
+-------------------------------------
+
+I've become accustomed to a few settings:
+
+- Colour scheme (mystic):
+  * background: #082040 (8,32,64)
+  * foreground: #eeeeec (238,238,236)
+
+- Text
+  * font: Source Code Pro Medium: 12pt
+
+This is a start, obviously, but at least I'm hoping I wont go crazy trying to achieve the colour
+combinations I am used to on the various desktops I use.
+
 2015-May-23 | AsciiDoc (LaTeX) on Cygwin
 ----------------------------------------
 
