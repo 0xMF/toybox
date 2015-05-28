@@ -1,6 +1,16 @@
 Captain's Log
 =============
 
+2015-May-27 | Contributions on GH
+---------------------------------
+
+The contributions graph on my GH profile page is addictive. I've been trying to make at least one,
+some days small, change to something that is publicly available to get a checkbox on my contribution
+for that day. Here's what I discovered today: opening a pull request on a forked repo acts as
+a contribution but subsequent updates to master on the forked repo no longer count as contributions.
+This means the only time GH will view my contribution on a forked repo is if I open a PR each time,
+which is pretty difficult to do on a daily basis don't you think? Hmm....
+
 2015-May-24 | Cygwin ls colors
 ------------------------------
 
