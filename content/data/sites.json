@@ -1,8 +1,12 @@
 {
-    "sites": [
-        {
-            "name": "Hacker News",
-            "url": "https://news.ycombinator.com/"
-        }
-    ]
+  "sites": [
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "name": "Lobsters",
+      "url": "https://lobste.rs/"
+    }
+  ]
 }
