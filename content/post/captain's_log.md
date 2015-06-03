@@ -1,6 +1,18 @@
 Captain's Log
 =============
 
+2015-June-03 | parsing HN
+--------------------------
+
+An initial  parse of Hacker News:
+
+```shell
+curl "https://news.ycombinator.com"\
+ |sed -e 's/<[b-zA-Z\/][^>]*>//g'\
+ |grep " *[0-9][0-9]"\
+ |sed 's/<a id=[^>]*>//'
+```
+
 2015-May-27 | Contributions on GH
 ---------------------------------
 
