@@ -1,6 +1,19 @@
 Captain's Log
 =============
 
+2015-June-05 | pandoc for static content
+----------------------------------------
+
+pandoc is useful for generating static content, for example:
+
+```shell
+pandoc -s -S --toc -c pandoc.css  B_adding_pages.md -o B_adding_pages.html
+```
+
+The only problem I've noticed is after generating the HTML files, and opening them directly from
+a browser, images do not get loaded so I would need a simple webserver (or since I'm already on
+Windows just use IIS). This would be the next step.
+
 2015-June-03 | parsing HN
 --------------------------
 
