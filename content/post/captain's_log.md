@@ -1,6 +1,22 @@
 Captain's Log
 =============
 
+2015-June-06 | updating cygwin64 and Term::ReadKey
+--------------------------------------------------
+
+After updating cygwin64 via ```apt-cyg`` I noticed my ```Term::ReadKey``` Perl module stopped
+working and so had to reinstall making sure the right dependencies, extra in place:
+
+```shell
+apt-cyg install gcc-core gcc-g++ libcrypt-devel openssh-devel make
+```
+
+and later install the Perl module via
+
+```
+cpan install Term:ReadKey
+```
+
 2015-June-05 | pandoc for static content
 ----------------------------------------
 
