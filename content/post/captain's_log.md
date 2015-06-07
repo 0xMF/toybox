@@ -57,6 +57,12 @@ bind + resize-pane -U 1
 setw -g mode-keys vi
 ```
 
+I had a small issue with git pushing to GitHub after I started using tmux, msysgit was behaving
+strangely, so I decided to `apt-cyg install git` and run with that (I had to rename my existing
+msysgit folder to avoid path conflicts). With that out of the way, git (from Cygwin) worked. The
+good part of the Cygwin port is git run within the Unix-like context unlike mysgit (which does use
+Windows pathnames and a few Windows-like settings). If this push goes through then git worked!
+
 
 2015-June-06 | updating cygwin64 and Term::ReadKey
 --------------------------------------------------
