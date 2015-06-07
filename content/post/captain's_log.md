@@ -1,10 +1,67 @@
 Captain's Log
 =============
 
+2015-June-07 | updating cygwin64 and tmux
+-----------------------------------------
+
+I got tmux to work on cygwin. Yaay! Sequence of steps:
+
+```shell
+apt-cyg install tmux
+apt-cyg install mintty
+mintty
+tmux
+```
+
+Here are some relevant .tmux.conf settings I use
+
+```shell
+
+# use screen style prefix key
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# no status bar
+set -g status off
+
+set -g default-terminal "xterm-256color"
+set -g default-command "${SHELL}"
+
+# avoid selecting by mouse so we can use copy paste
+set-option -g mouse-select-pane off
+
+# select window
+bind '"' choose-window
+
+# split windows like vim
+# vim's definition of a horizontal/vertical split is reversed from tmux's
+bind s split-window -v
+bind v split-window -h
+
+# move around panes with hjkl, as one would in vim after pressing ctrl-w
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# resize panes like vim
+# feel free to change the "1" to however many lines you want to resize by, only
+# one at a time can be slow
+bind < resize-pane -L 1
+bind > resize-pane -R 1
+bind - resize-pane -D 1
+bind + resize-pane -U 1
+
+# vi-style controls for copy mode
+setw -g mode-keys vi
+```
+
+
 2015-June-06 | updating cygwin64 and Term::ReadKey
 --------------------------------------------------
 
-After updating cygwin64 via ```apt-cyg`` I noticed my ```Term::ReadKey``` Perl module stopped
+After updating cygwin64 via `apt-cyg` I noticed my `Term::ReadKey` Perl module stopped
 working and so had to reinstall making sure the right dependencies, extra in place:
 
 ```shell
