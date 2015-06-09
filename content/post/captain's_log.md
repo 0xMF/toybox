@@ -1,6 +1,17 @@
 Captain's Log
 =============
 
+2015-June-08 | Old example and .Net
+-----------------------------------
+
+I use .Net, which means I use C# and VB.Net. Earlier today, I thought I had written code for
+something using C# but it turned out my code was actually written in VB.Net. I was searching for it
+in the wrong place!
+
+The point of this observation is the seamless nature of .Net. I was so sure I solved the problem in
+C# that it did not occur to me (until much later) that my code could have been in an entirely
+different language!
+
 2015-June-07 | updating cygwin64 and tmux
 -----------------------------------------
 
