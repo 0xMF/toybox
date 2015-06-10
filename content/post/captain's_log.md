@@ -1,6 +1,17 @@
 Captain's Log
 =============
 
+2015-June-09 | Raspberry Pi as router using FreeBSD
+---------------------------------------------------
+
+Ideas come unexpectedly and the I feel pressurized to try it out. As my existing FreeBSD PC-based
+router is on it's last legs and I was looking at my Raspberry Pi doing nothing. I wondered if
+FreeBSD was supported on Raspberry Pi. It is and has been since [Jan 2013](https://www.raspberrypi.org/freebsd-is-here/#comments) and is supported in [FreeBSD/Arm Tier 2](https://www.freebsd.org/platforms/arm.html).
+
+A quick scan also reveal an [interesting blog post](http://qcktech.blogspot.ca/2012/08/raspberry-pi-as-router.html) with [associated video showing proof of concept](https://www.youtube.com/watch?v=l-_J2po3i0U).
+
+Will update with progress as I step through this setup over the next few days.
+
 2015-June-08 | Old example and .Net
 -----------------------------------
 
