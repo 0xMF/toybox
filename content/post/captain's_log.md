@@ -1,6 +1,33 @@
 Captain's Log
 =============
 
+2015-June-09 | From tmux-Cygwin pane ssh into FreeBSD local VM
+--------------------------------------------------------------
+
+So much FreeBSD! Now I'm running FreeBSD in a VirtualBox image on Windows. I even managed to
+configure it as a Scheduled Task to run whenever I login with these settings
+
+```
+Settings for Task Scheduler:
+- Edit Trigger Tab:
+    * Begin the tast: On connection to user session
+    * Connection from local computer
+- Action Tab:
+    * Start a program: (calls script 'freebsd.cmd' see below)
+- Settings Tab (enable these, disable all else):
+    * Allow task to be run on demand
+    * If the running task does not end when requested, force it to stop
+    * If the task is already running, then the following rule applies:
+      Do not start another instance
+
+freebsd.cmd
+@c:\path\\to\Oracle\VirtualBox\VBoxManage startvm "name of FreeBSD vm" --type headless
+
+```
+
+This should now set me up for a full blown Unix environment I am used to within my Windows. Will
+test and update if anything changes.
+
 2015-June-09 | Raspberry Pi as router using FreeBSD
 ---------------------------------------------------
 
