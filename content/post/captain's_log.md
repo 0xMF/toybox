@@ -1,6 +1,42 @@
 Captain's Log
 =============
 
+2015-June-15 | git Protocol
+---------------------------
+
+A great list of steps for [maintaining a git repo](https://github.com/thoughtbot/guides/tree/master/protocol/git) especially the steps involved in writing a feature, the sequence of steps is as follows:
+
+```shell
+git checkout master
+git pull
+git checkout -b <feature-branch-name>
+
+# get new changes (if any)
+git fetch origin
+git rebase origin/master
+
+# stage and commit
+git add --all
+git status
+git commit --verbose
+(git rebase -i orgin/master)
+
+# create remote branch
+git push --force origin <feature-branch-name>
+
+# merge locally and push remote
+git log origin/master..<branch-name>
+git diff --stat origin/master
+git checkout master
+git merge <branch-name> --ff-only
+git push
+
+# delete remote and local branches
+git push origin --delete <feature-branch-name>
+git branch --delete <feature-branch-name>
+```
+
+
 2015-June-14 | Solarized
 ------------------------
 
