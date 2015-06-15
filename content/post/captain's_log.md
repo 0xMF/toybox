@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2015-June-14 | Solarized
+------------------------
+
+Finally discovered and started using [Solarized=dark](http://ethanschoonover.com/solarized), and got
+it installed on all my regular workflow. Very good in all the lighting conditions I use so far.
+
 2015-June-09 | From tmux-Cygwin pane ssh into FreeBSD local VM
 --------------------------------------------------------------
 
