@@ -6,6 +6,12 @@ Captain's Log
 
 Finally discovered and started using [Solarized=dark](http://ethanschoonover.com/solarized), and got
 it installed on all my regular workflow. Very good in all the lighting conditions I use so far.
+These are the setting values I needed for dark:
+
+  Background RGB:   0,  43,  54
+  Foreground RGB: 147, 161, 161
+
+A complete list of all Solarized values, for both [light and dark are here](http://ethanschoonover.com/solarized#the-values)
 
 2015-June-09 | From tmux-Cygwin pane ssh into FreeBSD local VM
 --------------------------------------------------------------
