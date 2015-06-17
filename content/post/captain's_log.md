@@ -1,6 +1,15 @@
 Captain's Log
 =============
 
+2015-June-16 | solved problems
+------------------------------
+
+Most programming related problems are solved by looking at code that is similar to another problem
+but will work with small changes on the existing one. This means when learning something new, that
+database or memory map of howto do stuff needs to be learned and until that is done, everything will
+be trickier than need be because the mental models aren't in place (yet).
+
+
 2015-June-15 | git Protocol
 ---------------------------
 
