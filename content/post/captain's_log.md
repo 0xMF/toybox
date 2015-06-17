@@ -1,6 +1,15 @@
 Captain's Log
 =============
 
+2015-June-17 | Win 8.1 local and online accounts
+------------------------------------------------
+
+I hate being logged with 'online only' accounts such as Microsoft's Online Accounts for Win 8.1.
+Recently being forced to use Skype meant I reached for the Skype Metro app, which meant I was forced
+to upgrade my local account to Microsoft's Online Account. Only much later, I found a way to convert
+Win 8.1 [Online to Local
+Account](http://www.nextofwindows.com/windows-8-1-how-to-convert-windows-live-account-to-local-account/)
+
 2015-June-16 | solved problems
 ------------------------------
 
