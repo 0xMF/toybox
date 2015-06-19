@@ -1,6 +1,18 @@
 Captain's Log
 =============
 
+2015-June-17 | Learning continuously
+------------------------------------
+
+One of the hardest things for me to do is to write code, small pieces each day and post (even if it
+does not work) to GitHub. There are several factors for this:
+
+  - cannot focus on a language or a project for a sufficient duration of time
+  - if I do, then leaving it and getting back into it is hard. Very hard
+  - distractions from newer, fancier, cooler projects tends to derail 
+
+Having written this now, let me think over it for a couple of days.
+
 2015-June-17 | Win 8.1 local and online accounts
 ------------------------------------------------
 
