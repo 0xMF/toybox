@@ -201,8 +201,8 @@ ii  gir1.2-caribou-1.0                           0.4.19-1                       
 ii  gir1.2-cinnamondesktop-3.0                   2.6.5-1                                amd64        Introspection data for CinnamonDesktop
 ii  gir1.2-clutter-1.0:amd64                     1.24.2-1                               amd64        GObject introspection data for the Clutter 1.0 library
 ii  gir1.2-cmenu-3.0                             2.6.0-2                                amd64        GObject introspection data for the Cinnamon menu library
-ii  gir1.2-cogl-1.0                              1.22.0-1                               amd64        GObject introspection data for the Cogl 1.0 library
-ii  gir1.2-coglpango-1.0                         1.22.0-1                               amd64        GObject introspection data for the CoglPango 1.0 library
+ii  gir1.2-cogl-1.0:amd64                        1.22.0-2                               amd64        GObject introspection data for the Cogl 1.0 library
+ii  gir1.2-coglpango-1.0:amd64                   1.22.0-2                               amd64        GObject introspection data for the CoglPango 1.0 library
 ii  gir1.2-freedesktop:amd64                     1.46.0-3                               amd64        Introspection data for some FreeDesktop components
 ii  gir1.2-gconf-2.0                             3.2.6-3                                amd64        GNOME configuration database system (GObject-Introspection)
 ii  gir1.2-gdesktopenums-3.0                     3.18.1-1                               amd64        GObject introspection for GSettings desktop-wide schemas
@@ -231,8 +231,8 @@ ii  gir1.2-upowerglib-1.0                        0.99.3-1+b2                    
 ii  gir1.2-webkit-3.0:amd64                      2.4.9-3                                amd64        Web content engine library for GTK+ - GObject introspection data
 ii  gir1.2-webkit2-4.0:amd64                     2.10.4+dfsg1-1                         amd64        Web content engine library for GTK+ - GObject introspection data
 ii  gir1.2-xkl-1.0                               5.2.1-1                                amd64        X Keyboard Extension high-level API - introspection data
-ii  git                                          1:2.6.4-1                              amd64        fast, scalable, distributed revision control system
-ii  git-man                                      1:2.6.4-1                              all          fast, scalable, distributed revision control system (manual pages)
+ii  git                                          1:2.7.0~rc3-1                          amd64        fast, scalable, distributed revision control system
+ii  git-man                                      1:2.7.0~rc3-1                          all          fast, scalable, distributed revision control system (manual pages)
 ii  gkbd-capplet                                 3.6.0-1                                amd64        GNOME control center tools for libgnomekbd
 ii  gksu                                         2.0.2-9                                amd64        graphical front-end to su and sudo
 ii  glib-networking:amd64                        2.46.1-1                               amd64        network-related giomodules for GLib
@@ -314,7 +314,7 @@ ii  icedove                                      38.5.0-1+b1                    
 ii  iceowl-extension                             38.5.0-1+b1                            amd64        Calendar Extension for Thunderbird/Icedove
 ii  iceweasel                                    43.0.4-1                               amd64        Web browser based on Firefox
 ii  ienglish-common                              3.4.00-4                               all          Common files for British and American ispell dictionaries
-ii  ifupdown                                     0.7.54                                 amd64        high level tools to configure network interfaces
+ii  ifupdown                                     0.8.6                                  amd64        high level tools to configure network interfaces
 ii  iio-sensor-proxy                             1.1-1                                  amd64        IIO sensors to D-Bus proxy
 ii  imagemagick                                  8:6.8.9.9-6+b1                         amd64        image manipulation programs -- binaries
 ii  imagemagick-6.q16                            8:6.8.9.9-6+b1                         amd64        image manipulation programs -- quantum depth Q16
@@ -437,9 +437,9 @@ ii  libc-l10n                                    2.21-6                         
 ii  libc6:amd64                                  2.21-6                                 amd64        GNU C Library: Shared libraries
 ii  libc6-dev:amd64                              2.21-6                                 amd64        GNU C Library: Development Libraries and Header Files
 ii  libcaca0:amd64                               0.99.beta19-2+b1                       amd64        colour ASCII art library
-ii  libcairo-gobject2:amd64                      1.14.4-1                               amd64        Cairo 2D vector graphics library (GObject library)
+ii  libcairo-gobject2:amd64                      1.14.6-1                               amd64        Cairo 2D vector graphics library (GObject library)
 ii  libcairo-perl                                1.106-1+b1                             amd64        Perl interface to the Cairo graphics library
-ii  libcairo2:amd64                              1.14.4-1                               amd64        Cairo 2D vector graphics library
+ii  libcairo2:amd64                              1.14.6-1                               amd64        Cairo 2D vector graphics library
 rc  libcairomm-1.0-1                             1.10.0-1.1                             amd64        C++ wrappers for Cairo (shared libraries)
 ii  libcairomm-1.0-1v5:amd64                     1.12.0-1                               amd64        C++ wrappers for Cairo (shared libraries)
 rc  libcamd2.3.1:amd64                           1:4.2.1-3                              amd64        symmetric approximate minimum degree library for sparse matrices
@@ -487,10 +487,10 @@ rc  libclutter-gst-2.0-0:amd64                   2.0.16-1                       
 ii  libclutter-gtk-1.0-0:amd64                   1.6.6-1                                amd64        Open GL based interactive canvas library GTK+ widget
 rc  libcmis-0.4-4                                0.4.1-7                                amd64        CMIS protocol client library
 rc  libcmis-0.5-5v5                              0.5.0-4                                amd64        CMIS protocol client library
-ii  libcogl-common                               1.22.0-1                               all          Object oriented GL/GLES Abstraction/Utility Layer (common files)
-ii  libcogl-pango20:amd64                        1.22.0-1                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
-ii  libcogl-path20:amd64                         1.22.0-1                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
-ii  libcogl20:amd64                              1.22.0-1                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
+ii  libcogl-common                               1.22.0-2                               all          Object oriented GL/GLES Abstraction/Utility Layer (common files)
+ii  libcogl-pango20:amd64                        1.22.0-2                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
+ii  libcogl-path20:amd64                         1.22.0-2                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
+ii  libcogl20:amd64                              1.22.0-2                               amd64        Object oriented GL/GLES Abstraction/Utility Layer
 rc  libcolamd2.8.0:amd64                         1:4.2.1-3                              amd64        column approximate minimum degree ordering library for sparse matrices
 ii  libcolamd2.9.1:amd64                         1:4.4.5-2                              amd64        column approximate minimum degree ordering library for sparse matrices
 ii  libcolord2:amd64                             1.2.12-1                               amd64        system service to manage device colour profiles -- runtime
@@ -498,7 +498,7 @@ ii  libcolorhug2:amd64                           1.2.12-1                       
 ii  libcomerr2:amd64                             1.42.13-1                              amd64        common error description library
 rc  libcrack2:amd64                              2.9.2-1+b1                             amd64        pro-active password checker library
 ii  libcroco3:amd64                              0.6.11-1                               amd64        Cascading Style Sheet (CSS) parsing and manipulation toolkit
-ii  libcryptsetup4:amd64                         2:1.6.6-5                              amd64        disk encryption support - shared library
+ii  libcryptsetup4:amd64                         2:1.7.0-2                              amd64        disk encryption support - shared library
 ii  libcrystalhd3:amd64                          1:0.0~git20110715.fdd2f19-11+b1        amd64        Crystal HD Video Decoder (shared library)
 ii  libcups2:amd64                               2.1.2-1                                amd64        Common UNIX Printing System(tm) - Core library
 ii  libcupscgi1:amd64                            2.1.2-1                                amd64        Common UNIX Printing System(tm) - CGI library
@@ -664,6 +664,7 @@ ii  libghc-xmonad-contrib-doc                    0.11.4-3                       
 ii  libghc-xmonad-dev                            0.11.1-4                               amd64        Lightweight X11 window manager
 ii  libghc-xmonad-doc                            0.11.1-4                               all          Lightweight X11 window manager; documentation
 ii  libgimp2.0                                   2.8.16-1                               amd64        Libraries for the GNU Image Manipulation Program
+ii  libgirara-gtk3-2:amd64                       0.2.5-1                                amd64        library for minimalistic user interfaces (shared libraries, GTK+ 3)
 ii  libgirepository-1.0-1:amd64                  1.46.0-3                               amd64        Library for handling GObject introspection data (runtime library)
 rc  libgit2-21:amd64                             0.21.1-3                               amd64        low-level Git library
 rc  libgjs0e                                     1.43.3-2                               amd64        Mozilla-based javascript bindings for the GNOME platform
@@ -709,8 +710,8 @@ ii  libgnomevfs2-0:amd64                         1:2.24.4-6.1                   
 ii  libgnomevfs2-common                          1:2.24.4-6.1                           all          GNOME Virtual File System (common files)
 ii  libgnomevfs2-extra:amd64                     1:2.24.4-6.1                           amd64        GNOME Virtual File System (extra modules)
 ii  libgnustep-base1.24                          1.24.7-1+b1                            amd64        GNUstep Base library
-ii  libgnutls-deb0-28:amd64                      3.3.19-1                               amd64        GNU TLS library - main runtime library
-ii  libgnutls-openssl27:amd64                    3.3.19-1                               amd64        GNU TLS library - OpenSSL wrapper
+ii  libgnutls-deb0-28:amd64                      3.3.20-1                               amd64        GNU TLS library - main runtime library
+ii  libgnutls-openssl27:amd64                    3.3.20-1                               amd64        GNU TLS library - OpenSSL wrapper
 ii  libgoa-1.0-0b:amd64                          3.18.3-1                               amd64        library for GNOME Online Accounts
 ii  libgoa-1.0-common                            3.18.3-1                               all          library for GNOME Online Accounts - common files
 rc  libgom-1.0-0:amd64                           0.3.1-1                                amd64        Object mapper from GObjects to SQLite
@@ -1019,7 +1020,7 @@ ii  libpam-gnome-keyring                         3.18.3-1                       
 ii  libpam-modules:amd64                         1.1.8-3.2                              amd64        Pluggable Authentication Modules for PAM
 ii  libpam-modules-bin                           1.1.8-3.2                              amd64        Pluggable Authentication Modules for PAM - helper binaries
 ii  libpam-runtime                               1.1.8-3.2                              all          Runtime support for the PAM library
-ii  libpam-systemd:amd64                         228-2+b1                               amd64        system and service manager - PAM module
+ii  libpam-systemd:amd64                         228-4                                  amd64        system and service manager - PAM module
 ii  libpam0g:amd64                               1.1.8-3.2                              amd64        Pluggable Authentication Modules library
 ii  libpango-1.0-0:amd64                         1.38.1-1                               amd64        Layout and rendering of internationalized text
 ii  libpango-perl                                1.226-3+b1                             amd64        Perl module to layout and render international text
@@ -1212,7 +1213,7 @@ ii  libswresample-ffmpeg1:amd64                  7:2.8.4-1+b1                   
 ii  libswscale-ffmpeg3:amd64                     7:2.8.4-1+b1                           amd64        FFmpeg library for image scaling and various conversions - runtime files
 rc  libswscale3:amd64                            6:11.4-1~deb8u1                        amd64        Libav video scaling library
 ii  libsynctex1:amd64                            2015.20150524.37493-7+b1               amd64        TeX Live: SyncTeX parser library
-ii  libsystemd0:amd64                            228-2+b1                               amd64        systemd utility library
+ii  libsystemd0:amd64                            228-4                                  amd64        systemd utility library
 rc  libtag1-vanilla:amd64                        1.9.1-2.1                              amd64        audio meta-data library - vanilla flavour
 ii  libtag1v5:amd64                              1.9.1-2.4                              amd64        audio meta-data library
 ii  libtag1v5-vanilla:amd64                      1.9.1-2.4                              amd64        audio meta-data library - vanilla flavour
@@ -1248,7 +1249,7 @@ ii  libtsan0:amd64                               5.3.1-5                        
 ii  libtwolame0:amd64                            0.3.13-1.2                             amd64        MPEG Audio Layer 2 encoding library
 ii  libtxc-dxtn-s2tc0:amd64                      0~git20131104-1.1                      amd64        Texture compression library for Mesa
 ii  libubsan0:amd64                              5.3.1-5                                amd64        UBSan -- undefined behaviour sanitizer (runtime)
-ii  libudev1:amd64                               228-2+b1                               amd64        libudev shared library
+ii  libudev1:amd64                               228-4                                  amd64        libudev shared library
 ii  libudisks2-0:amd64                           2.1.6-2                                amd64        GObject based library to access udisks2
 rc  libumfpack5.6.2:amd64                        1:4.2.1-3                              amd64        sparse LU factorization library
 ii  libumfpack5.7.1:amd64                        1:4.4.5-2                              amd64        sparse LU factorization library
@@ -1461,8 +1462,8 @@ ii  lmodern                                      2.004.5-1                      
 ii  locales                                      2.21-6                                 all          GNU C Library: National Language (locale) data [support]
 ii  login                                        1:4.2-3.1                              amd64        system login tools
 ii  logrotate                                    3.8.7-2                                amd64        Log rotation utility
-ii  lsb-base                                     9.20150917                             all          Linux Standard Base init script functionality
-ii  lsb-release                                  9.20150917                             all          Linux Standard Base version reporting utility
+ii  lsb-base                                     9.20160110                             all          Linux Standard Base init script functionality
+ii  lsb-release                                  9.20160110                             all          Linux Standard Base version reporting utility
 ii  lsof                                         4.89+dfsg-0.1                          amd64        Utility to list open files
 ii  lvm2                                         2.02.138-1                             amd64        Linux Logical Volume Manager
 ii  m4                                           1.4.17-5                               amd64        macro processing language
@@ -1678,8 +1679,8 @@ ii  swell-foop                                   1:3.18.1-1                     
 ii  synaptic                                     0.82.5                                 amd64        Graphical package manager
 ii  system-config-printer                        1.5.7-1                                all          graphical interface to configure the printing system
 ii  system-config-printer-udev                   1.5.7-1                                amd64        Utilities to detect and configure printers automatically
-ii  systemd                                      228-2+b1                               amd64        system and service manager
-ii  systemd-sysv                                 228-2+b1                               amd64        system and service manager - SysV links
+ii  systemd                                      228-4                                  amd64        system and service manager
+ii  systemd-sysv                                 228-4                                  amd64        system and service manager - SysV links
 ii  sysv-rc                                      2.88dsf-59.2                           all          System-V-like runlevel change mechanism
 ii  sysvinit-utils                               2.88dsf-59.2                           amd64        System-V-like utilities
 ii  t1utils                                      1.39-2                                 amd64        Collection of simple Type 1 font manipulation programs
@@ -1731,7 +1732,7 @@ rc  transmission-gtk                             2.84-3                         
 ii  tree                                         1.7.0-3                                amd64        displays an indented directory tree, in color
 ii  tzdata                                       2015g-1                                all          time zone and daylight-saving time data
 ii  ucf                                          3.0031                                 all          Update Configuration File(s): preserve user changes to config files
-ii  udev                                         228-2+b1                               amd64        /dev/ and hotplug management daemon
+ii  udev                                         228-4                                  amd64        /dev/ and hotplug management daemon
 ii  udisks2                                      2.1.6-2                                amd64        D-Bus service to access and manipulate storage devices
 ii  unar                                         1.9.1-1                                amd64        Unarchiver for a variety of file formats
 ii  unzip                                        6.0-20                                 amd64        De-archiver for .zip files
@@ -1837,6 +1838,7 @@ ii  xtrans-dev                                   1.3.5-1                        
 ii  xz-utils                                     5.1.1alpha+20120614-2.1                amd64        XZ-format compression utilities
 ii  yelp                                         3.16.1-1                               amd64        Help browser for GNOME
 ii  yelp-xsl                                     3.18.1-1                               all          XSL stylesheets for the yelp help browser
+ii  zathura                                      0.3.4-1                                amd64        PDF viewer with a minimalistic interface
 rc  zeitgeist-core                               0.9.16-0.1                             amd64        event logging framework - engine
 rc  zeitgeist-datahub                            0.9.16-0.1                             amd64        event logging framework - passive logging daemon
 ii  zenity                                       3.18.1.1-1                             amd64        Display graphical dialog boxes from shell scripts
