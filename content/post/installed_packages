@@ -880,8 +880,10 @@ ii  liblouisutdml6:amd64                         2.5.0-2                        
 ii  liblqr-1-0:amd64                             0.4.2-2                                amd64        converts plain array images into multi-size representation
 ii  liblsan0:amd64                               5.3.1-5                                amd64        LeakSanitizer -- a memory leak detector (runtime)
 ii  libltdl7:amd64                               2.4.2-1.11                             amd64        System independent dlopen wrapper for GNU libtool
-rc  liblua5.1-0:amd64                            5.1.5-8                                amd64        Shared library for the Lua interpreter version 5.1
+ii  liblua5.1-0:amd64                            5.1.5-8                                amd64        Shared library for the Lua interpreter version 5.1
 ii  liblua5.2-0:amd64                            5.2.4-1                                amd64        Shared library for the Lua interpreter version 5.2
+ii  libluajit-5.1-2:amd64                        2.0.4+dfsg-1                           amd64        Just in time compiler for Lua - library version
+ii  libluajit-5.1-common                         2.0.4+dfsg-1                           all          Just in time compiler for Lua - common files
 ii  liblvm2app2.2:amd64                          2.02.138-1                             amd64        LVM2 application library
 ii  liblvm2cmd2.02:amd64                         2.02.138-1                             amd64        LVM2 command library
 ii  liblwp-mediatypes-perl                       6.02-1                                 all          module to guess media type for a file or a URL
@@ -1523,6 +1525,8 @@ ii  p7zip-full                                   9.20.1~dfsg.1-4.2              
 ii  packagekit                                   1.0.11-1                               amd64        Provides a package management service
 ii  packagekit-tools                             1.0.11-1                               amd64        Provides PackageKit command-line tools
 ii  pal                                          0.4.3-8.1+b1                           amd64        command-line calendar program that can keep track of events
+ii  pandoc                                       1.15.1.1~dfsg-2+b1                     amd64        general markup converter
+ii  pandoc-data                                  1.15.1.1~dfsg-2                        all          general markup converter - data files
 ii  parted                                       3.2-12                                 amd64        disk partition manipulator
 ii  passwd                                       1:4.2-3.1                              amd64        change and administer password and group data
 ii  patch                                        2.7.5-1                                amd64        Apply a diff file to an original
