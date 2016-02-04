@@ -1,6 +1,22 @@
 Captain's Log
 =============
 
+2016-Feb-03 | VirtualBox on USB
+-------------------------------
+
+This is a very helpful post to making a [bootable USB run as a VM in VirtualBox](http://www.howtogeek.com/187721/how-to-boot-from-a-usb-drive-in-virtualbox/). The basic command for this activity is:
+
+```
+VBoxManage internalcommands createrawvmdk -filename C:\usb.vmdk -rawdisk \\.\PhysicalDrive#
+```
+
+The PhysicalDrive# is got from Disk Management (Windows Key + R and type ```diskmgmt.msc```). Once the
+vmdk file is created (it will be <1K), go through the steps of making a VM, do not make a separate
+VM disk instead point the disk to ```C:\usb.vmdk```.
+
+Remember all process shown above require Administrator access including running the VM off the USB.
+
+
 2015-June-17 | Learning continuously
 ------------------------------------
 
