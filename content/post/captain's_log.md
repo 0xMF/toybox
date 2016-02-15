@@ -1,6 +1,23 @@
 Captain's Log
 =============
 
+2016-Feb-15 | Copying Debian Packages
+-------------------------------------
+
+Tips to [copy installed packages from source to target](http://qref.sourceforge.net/Debian/reference/ch-package.en.html)
+
+```
+# source 
+# dpkg --get-selections  > debian.installed_packages
+# debconf-get-selections > debian.debconf_selections
+
+# target
+# dselect update
+# debconf-set-selections < debian.debconf_selections
+# dpkg --set-selections  < debian.installed_packages
+# apt-get -u dselect-upgrade    # or dselect install
+```
+
 2016-Feb-03 | VirtualBox on USB
 -------------------------------
 
@@ -1136,5 +1153,5 @@ chmod +t test
 I had to create a captain's log markdown file because Hugo does not accept AsciiDoc just yet.
 
 <!--
-# vim: spell:ft=markdown:tw=100
+# vim: spell:ft=markdown:tw=100:nonu
 -->
