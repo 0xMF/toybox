@@ -1,6 +1,20 @@
 Captain's Log
 =============
 
+2016-Feb-17 | Virtual Network Computing
+---------------------------------------
+
+First time I've tried out Virtual Network Computing. I used [TigerVNC](http://tigervnc.org/).
+A couple of points to keep in mind when using VNC:
+
+* A VNC server needs to be installed on remote
+* A VNC client on local
+* The remote VNC server should allow vnc server packets across
+* Start the vnc share to the local desktop (unprivileged user)
+* When connecting, with TigerVNC, in full screen mode use F8 to exit.
+
+More details later...
+
 2016-Feb-15 | Copying Debian Packages
 -------------------------------------
 
