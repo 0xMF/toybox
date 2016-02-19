@@ -1,6 +1,44 @@
 Captain's Log
 =============
 
+2016-Feb-19 | git squashing and shared folder symlinks
+------------------------------------------------------
+
+I liked this blog post explanation of [automatically squashing commits in git]
+(https://robots.thoughtbot.com/autosquashing-git-commits). The central idea is to use
+
+```
+$ git commit --fixup :/earlier commit
+```
+with
+
+```
+$ git rebase --interactive --autosquash
+```
+
+to automatically squash older commits where a typo or minor mistakes had been made. The
+```:/earlier commit``` detects which most recent commit message matches the text "earlier commit"
+and issues a fixup for that commit so a subsequent rebase later would do a fixup on that commit
+message. Setting 
+
+```
+$ git config --global rebase.autosquash true
+```
+
+automatically makes every rebase an autosquash.
+
+
+In other news, running Debian guest on Windows brings up peculiar issues when using shared folders.
+For example I had to use 
+
+```
+C:\> VBoxManage setextradata VM_NAME VBoxInternal2/SharedFoldersEnableSymlinksCreate/SHARE_NAME 1
+```
+
+based on [this VirtualBox bug and workaround](https://www.virtualbox.org/ticket/10085).
+Note: VM_NAME and SHARE_NAME need to be changed appropriately.
+
+
 2016-Feb-17 | Virtual Network Computing
 ---------------------------------------
 
