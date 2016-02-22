@@ -12,15 +12,55 @@ There are two ways to do this:
   * start a repo from scratch
   * copy (in git parlance the term clone is used) an existing repo
 
-#### Creates a new repo
+##### Creates a new repo
 ```
 $ git init repo_name
 ```
 
-#### Clones an existing repo
+##### Clones an existing repo
 ```
 $ git clone origin_repo_name
 ```
+
+Branches
+--------
+
+A problem with working on master all the time is, after a bit, the git log gets ugly because many
+small commits could've been merged into fewer larger and more complete ones at the end of the day
+(session). ```git rebase``` works but that can be problematic when using ```git push -f``` simply to
+clean up a master (```git push -f``` rewrites history and that can be problematic when changes made
+to master have been shared-with-others). 
+
+A better solution to this problem is to have branches and use those branches for daily work; then
+when branches commit logs look ok, merge that change onto master. This approach has the benefit of:
+
+  * working on a branch without worrying about ruining a perfectly good master commit log
+  * merging changes with master when done to continue that pristine commit log
+
+The steps when using branches are:
+
+  1. Create a branch
+
+    ```
+    $ git branch 0xMF_dev
+    ```
+
+  2. Switch to branch 0xMF_dev
+
+    ```
+    $ git checkout 0xMF_dev
+    ```
+
+  3. Work on branch and make all fresh changes on the branch. Some of these changes would include:
+     squash, fixup, with their associated rebase.
+
+  4. Finally when all is done on the branch and it is ready to merge; switch to master and merge:
+
+    ```
+    $ git checkout master
+    $ git merge 0xMF_dev
+    ```
+
 
 Remotes
 -------
