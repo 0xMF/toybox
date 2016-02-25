@@ -1,11 +1,29 @@
 Captain's Log
 =============
 
+2016-Feb-25 | GitHub contributions
+----------------------------------
+
+Doing `git push -f` to master does not show up in the contributions for that day if the
+changes had a fixup. In other words, if you have the following sequence of commits:
+
+```
+$ git commit --fixup ...
+$ git rebase ...
+$ git push -f upstream/master
+```
+
+then GitHub will not count that contribution for that day, even if I am the owner of the repo I
+pushed to. This seems weird but maybe it's just me.  
+
 2016-Feb-24 | broken vim
 ------------------------
 
 While trying to sync two .vim repos, some settings broke. I'll need to dig deep to find out 
-what broke and why.
+what broke and why. 
+
+(update: 2016-Feb-25) I quickly found out why. I had an abbreviation expand that ruined my
+local variable expansion so after correcting that, all seems to be fine.
 
 2016-Feb-19 | git squashing and shared folder symlinks
 ------------------------------------------------------
