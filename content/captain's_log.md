@@ -1,6 +1,12 @@
 Captain's Log
 =============
 
+2016-Feb-24 | broken vim
+------------------------
+
+While trying to sync two .vim repos, some settings broke. I'll need to dig deep to find out 
+what broke and why.
+
 2016-Feb-19 | git squashing and shared folder symlinks
 ------------------------------------------------------
 
