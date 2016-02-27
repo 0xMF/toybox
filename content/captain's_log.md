@@ -25,6 +25,10 @@ what broke and why.
 (update: 2016-Feb-25) I quickly found out why. I had an abbreviation expand that ruined my
 local variable expansion so after correcting that, all seems to be fine.
 
+(update: 2016-Feb-26) Added a few keymappings. 
+(update: 2016-Feb-27) Took the leap and jumped into using dotfiles/repo/vim. This means all
+subsequent changes will be tracked in the repo.
+
 2016-Feb-19 | git squashing and shared folder symlinks
 ------------------------------------------------------
 
