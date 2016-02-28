@@ -1,11 +1,27 @@
 Captain's Log
 =============
 
+2016-Feb-28 | Minor tweaks: vim, Xmonad
+---------------------------------------
+
+Trying to make my workflow environment aesthetically pleasing at the
+same time maximize desktop area can be challenging. I might have hit the
+sweet spot of everything right now:
+
+  * Debian Testing VM on Windows 10
+  * Xmonad as the desktop manager
+  * Vim as my text editor
+  * tmux as the terminal multiplexer
+  * vim settings (see end of this file) in conjunction with my vimrc
+
+This means I've got maximum screen area that is aesthetically pleasing
+given my laptop screen size and OS setup.
+
 2016-Feb-25 | GitHub contributions
 ----------------------------------
 
-Doing `git push -f` to master does not show up in the contributions for that day if the
-changes had a fixup. In other words, if you have the following sequence of commits:
+Doing `git push -f` to master does not show up in the contributions for that day if the changes had
+a fixup. In other words, if you have the following sequence of commits:
 
 ```
 $ git commit --fixup ...
@@ -1233,5 +1249,5 @@ chmod +t test
 I had to create a captain's log markdown file because Hugo does not accept AsciiDoc just yet.
 
 <!--
-# vim: spell:ft=markdown:tw=100:nonu
+# vim: spell:ft=markdown:tw=72:nonu:cc=70:nowrap:go-=r
 -->
