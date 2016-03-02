@@ -1,8 +1,5 @@
 toybox
 ======
 
-a scratch repo for learning and testing purposes
-
-- [Captain's Log (markdown)](content/post/captain's_log.md)
-- (temporarily deprecicated) [Captain's Log](content/post/captain's_log.asciidoc)
-
+A repo where I document what I learned new. Follow my adventures through
+my [Captain's Log](content/captain's_log.md).
