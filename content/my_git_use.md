@@ -104,6 +104,47 @@ Here is the way I've setup my remotes
 What's the advantage of doing this? Heh! Right now I don't know but intuitively I've seen many posts
 suggest a similar structure. As I become aware of these advantages, I'll update this file.
 
+
+Pull/Merge/Rebase
+-----------------
+
+Having a simple, well documented, and linear git history is a prized
+goal and it should be something to work towards as that makes
+understanding the project easier, however, when sharing a repo across
+machines I noticed using `git push` to post to GitHub and then using
+`git pull` to pull the same repo but on another machine meant creating
+non-linear git histories. This happened because `git pull` is in fact
+two steps: `git fetch` to bring the new content and `git merge` to merge
+that content. The `git merge` adds a branch merge into the git commit
+history of that repo.
+
+Needless to say, this isn't an ideal situation and the way out of it is
+to avoid using `git pull` but use `git fetch` followed by `git rebase`
+to add the new changes from the GitHub remote repo onto the local repo
+(that wasn't the originating local repo). I created two shell aliases
+for doing this:
+
+```
+alias gfr='git fetch; git rebase remotes/origin/master'
+alias gpr='git pull --rebase'
+```
+
+Using either alias now ensures both local repos on different machines
+keep a linear commit history. 
+
+There is a caveat, obviously, to this method because there might be
+times when it is preferable to have multiple branched commit histories
+appear (to tract changes made by different people or different features)
+and in such cases the following workflow would be recommended
+
+1. `git fetch`
+2. `git diff`   
+3. `git merge remotes/origin/master`
+
+Alternatively, when simply wanting to avoid the hassle of doing the
+above three step process and trusting the merge without questions...then
+in that case it would be fine to default to `git pull`
+
 <!--
-# vim: spell:ft=markdown:tw=100:nonu:nowrap:colorcolumn=0
+# vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
 -->
