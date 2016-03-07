@@ -145,6 +145,54 @@ Alternatively, when simply wanting to avoid the hassle of doing the
 above three step process and trusting the merge without questions...then
 in that case it would be fine to default to `git pull`
 
+
+Editing commit messages
+-----------------------
+
+So many times I've got into the situation of pushing changes, yes even
+to remote, and then realizing my mistake/typos/etc in the commit message
+and that bothers me. Unfortunately there are two conflicting demands
+going on when I realize the commit message(s) that I've already shared
+on GitHub:
+
+  1. The desire to fix the commit message
+  2. The problem with a shared remote going out of sync
+
+Git gives me several strategies to edit the incorrect/badly worded
+commit message:
+
+  1. For the most recent commit message: `$ git commit --amend`
+  2. For a change earlier in the commit history: `$ git rebase -i` which
+     is followed by:
+      * pick - keep commit and commit message as is
+      * fixup - keep commit but reuse an existing commit message as is
+      * squash - keep commit but throw away the commit message
+      * reword - keep comit but reword (edit) it's commit message
+
+After editing the commit message, the problem of sharing the changes
+still remains because the new SHA-1 that were created due to these
+changes are no longer consistent with the remote repo which others are
+using, so pushing to remote no longer works correctly unless I do a `git
+push -f` but that is problematic for anyone who might have already got
+the old (badly worded) commit history prior to me making those changes.
+This would mean they would need to re-download the new changes that I
+made after I used `git push -f`. Thus far this has been only me working
+with a remote repo but as many people start contributing to a common
+shared repo, the concept of using a remote branches for each developer
+and then using `git push -f` **only** on that branch and not on `master`
+is the way out of this situation.
+
+The problem does not go away as there might still be the case where
+after merging from contributors the git commit history still has typos
+and other errors...in which case `git branch` to create a branch that is
+synced with master; followed by `git revert`, on master, to revert
+changes as if they never happened to master; followed by `git
+cherry-pick/git patch` to get the commits in with the changes with the
+commit log written the way they were wanted is the way out of this mess.
+
+Not an easy task at all, still with a bit of understanding what to do
+followed by doing this a coupled of times makes the workflow easier.
+
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
 -->
