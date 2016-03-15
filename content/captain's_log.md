@@ -1,6 +1,29 @@
 Captain's Log
 =============
 
+2016-Mar-15 | Rebase branch and merge
+--------------------------------------
+
+This is the sequence of steps I followed to have a linear commit
+history.
+
+```
+$ git branch wip
+$ git checkout wip
+$ ...hack ...commit --fixup ...commit --squash ...hack ....rebase
+$ git rebase master
+$ git checkout master
+$ git merge wip
+$ git branch -d wip
+```
+
+Now I have a linear commit history the way I wanted.
+
+The only problem is GitHub uses the dates from the commits made in the
+local branch rather than when I pushed to GitHub so my contribution for
+today is this writeup instead ;)
+
+
 2016-Feb-28 | Minor tweaks: vim, Xmonad
 ---------------------------------------
 
