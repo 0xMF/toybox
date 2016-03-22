@@ -29,7 +29,7 @@ A problem with working on master all the time is, after a bit, the git log gets 
 small commits could've been merged into fewer larger and more complete ones at the end of the day
 (session). ```git rebase``` works but that can be problematic when using ```git push -f``` simply to
 clean up a master (```git push -f``` rewrites history and that can be problematic when changes made
-to master have been shared-with-others). 
+to master have been shared-with-others).
 
 A better solution to this problem is to have branches and use those branches for daily work; then
 when branches commit logs look ok, merge that change onto master. This approach has the benefit of:
@@ -42,24 +42,52 @@ The steps when using branches are:
   1. Create a branch
 
     ```
-    $ git branch 0xMF_dev
+    $ git branch wip
     ```
 
-  2. Switch to branch 0xMF_dev
+  2. Switch to branch wip
 
     ```
-    $ git checkout 0xMF_dev
+    $ git checkout wip
     ```
 
-  3. Work on branch and make all fresh changes on the branch. Some of these changes would include:
-     squash, fixup, with their associated rebase.
+  3. Work on branch and make all fresh changes on the branch. Some of
+     these changes would include: squash, fixup, with their associated
+     rebase.
 
-  4. Finally when all is done on the branch and it is ready to merge; switch to master and merge:
+  4. Finally when all is done on the branch and it is ready to merge,
+     there are two strategies to choose from:
+
+    - merge with a linear commit history on master (my preference)
+
+    ```
+    $ git rebase master
+    $ git checkout master
+    $ git merge wip
+    $ git branch -d wip
+    ```
+    - merge keeping branch commit history
 
     ```
     $ git checkout master
-    $ git merge 0xMF_dev
+    $ git merge wip
+    $ git branch -d wip
     ```
+
+    The only difference between the two approaches is doing a ```git
+    rebase master``` prior to merging with master.
+
+    The advantage of having a linear commit history on master is every
+    commit on master would be a condensed commit of one or more squashed
+    commits from its branches. There are no tramlines when viewing
+    commit history which makes the project commit history readable. This
+    approach is suited for single-developer or teams preferring linear
+    commit history on master.
+
+    The disadvantage of a linear commit history is the branch commit
+    history is lost so this strategy might not work for teams or
+    situations where maintiaining a record of branch history is
+    important.
 
 
 Remotes
@@ -86,7 +114,7 @@ Here is the way I've setup my remotes
 
   4. Clone the bare repo into another location, in my case I used ```$HOME:/repos/toybox```
   5. Add an upstream in second clone to github
-    
+
     ```
     $ git remote add upstream git@github.com:0xMF/toybox
     ```
@@ -130,7 +158,7 @@ alias gpr='git pull --rebase'
 ```
 
 Using either alias now ensures both local repos on different machines
-keep a linear commit history. 
+keep a linear commit history.
 
 There is a caveat, obviously, to this method because there might be
 times when it is preferable to have multiple branched commit histories
@@ -138,7 +166,7 @@ appear (to tract changes made by different people or different features)
 and in such cases the following workflow would be recommended
 
 1. `git fetch`
-2. `git diff`   
+2. `git diff`
 3. `git merge remotes/origin/master`
 
 Alternatively, when simply wanting to avoid the hassle of doing the
