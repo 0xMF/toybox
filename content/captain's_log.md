@@ -1,6 +1,26 @@
 Captain's Log
 =============
 
+2016-Mar-27 | Daily git use
+---------------------------
+
+Since the beginning of this year, 2016, I've tried to make at least one
+git commit per day, specifically, to make one contribution per day as
+counted by GitHub. It has gone great so far. Some days were stressful
+as I had to worry about what contribution I should make for that day but
+I quickly resolved that problem by signing up for GitHub's private
+repositories where I could make gratuitous commits without being
+bothered with how they looked or whether they were 'publish-worthy'.
+Another benefit from having private repos was the ability to host [my
+website](http://0xmf.com) on their servers thereby freeing me up from
+regular sysop (ok, ok, I'm dating myself there...I meant devop) related
+abilities.
+
+So does GitHub contribution graph work? Yes it does. I've successfully
+used it to up my git skills by doing daily git work thereby keeping me
+motivated and focused on using what I learned. In case you're
+wondering...I've written about what I've learned [here](my_git_use.md).
+
 2016-Mar-15 | Rebase branch and merge
 --------------------------------------
 
