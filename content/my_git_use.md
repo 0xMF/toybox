@@ -61,11 +61,13 @@ The steps when using branches are:
     - merge with a linear commit history on master (my preference)
 
     ```
-    $ git rebase master
+    $ git checkout wip  # done in step 2. above
+    $ git rebase master # alternatively: git rebase master origin/master
     $ git checkout master
     $ git merge wip
     $ git branch -d wip
     ```
+
     - merge keeping branch commit history
 
     ```
