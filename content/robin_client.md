@@ -5,13 +5,18 @@ This is a list of things I did to fix Robin Client for Android to the
 way I wanted it to work. The list is in reverse chronological order to
 make the more recent work done appear at the top
 
+- (Apr 8, 2016) Got Android Studio 1.5 to compile, run, and test Robin OSS (registered
+  as test app). Nice. This completes the cycle, so from now on only
+  updating is needed.
+
+#### Previous tasks (most recent is at the top)
+
 - Upgraded to Android Studio 1.5.1. This brings in AS xml settings from
   .idea directory. Also removed local.properties because that file is
   auto-generated, so tracking it is pointless really.
 
 - Got v2 to compile and run but not login.
 
-#### Previous tasks (most recent is at the top)
 
 - decided to update v2 first as it is more recent
 - forked [scruffyfox/Robin-Client](https://github.com/scruffyfox/Robin-Client) to [0xMF/Robin-Client](https://github.com/0xMF/Robin-Client) and added the following into .git/config
