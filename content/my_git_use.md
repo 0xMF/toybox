@@ -223,6 +223,22 @@ commit log written the way they were wanted is the way out of this mess.
 Not an easy task at all, still with a bit of understanding what to do
 followed by doing this a coupled of times makes the workflow easier.
 
+Unexplored Edge Cases
+---------------------
+
+A few edge case issues that I had using git but have not yet found an
+aceptable workaround:
+
+  - HOWTO filter out lines from a file rather than the file itself, has
+    [this solution from
+    StackOverflow](http://stackoverflow.com/questions/6557467/can-git-ignore-a-specific-line)
+    my immediate workaround for that solution was to ignore the file
+    completely with:
+    
+        git update-index --assume-unchanged [filename]
+        git update-index --no-assume-unchanged [filename]
+
+
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
 -->
