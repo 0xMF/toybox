@@ -226,8 +226,8 @@ followed by doing this a coupled of times makes the workflow easier.
 Unexplored Edge Cases
 ---------------------
 
-A few edge case issues that I had using git but have not yet found an
-aceptable workaround:
+(*consider this section wip*) A few edge case issues that I had using git but
+have not yet found an aceptable workaround:
 
   - HOWTO filter out lines from a file rather than the file itself, has
     [this solution from
@@ -238,6 +238,13 @@ aceptable workaround:
         git update-index --assume-unchanged [filename]
         git update-index --no-assume-unchanged [filename]
 
+  - HOWTO fix commit tramlines in master
+
+        git checkout -B branch_name <commit>
+        ...
+        git rebase master
+        git checkout master
+        git merge branch_name
 
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
