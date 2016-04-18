@@ -246,6 +246,8 @@ have not yet found an aceptable workaround:
         git checkout master
         git merge branch_name
 
+  - IDEA: gitlogbook with all commits
+
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
 -->
