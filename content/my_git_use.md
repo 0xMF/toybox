@@ -234,7 +234,7 @@ have not yet found an aceptable workaround:
     StackOverflow](http://stackoverflow.com/questions/6557467/can-git-ignore-a-specific-line)
     my immediate workaround for that solution was to ignore the file
     completely with:
-    
+
         git update-index --assume-unchanged [filename]
         git update-index --no-assume-unchanged [filename]
 
@@ -247,6 +247,30 @@ have not yet found an aceptable workaround:
         git merge branch_name
 
   - IDEA: gitlogbook with all commits
+
+  - HOWTO create patches and apply them
+
+        # create the patch (using specific commit-id or HEAD~n)
+        git format-patch -1 {commit-id} --stdout > some_patch.patch
+        git format-patch HEAD~1 --stdout > some_patch.patch
+
+        git apply --stat   some_patch.patch    # see what is in patch
+        git apply --check  some_patch.patch    # check for conflicts
+        git am --signoff < some_patch.patch    # apply patch and signoff
+
+  - HOWTO manage clean commit histories
+
+        git rebase -i HEAD~n
+        # then prefix each line with
+        #  - drop:    to drop commits that are not needed
+        #
+        #  - reword:  use commit but edit commit message
+        #  - edit:    use commit but edit the commit itself (split large
+        #             commits, drop some changes)
+        #
+        #  - squash:  use commit but meld with previous commit message
+        #  - fixup:   use commit but discard this commit message and
+        #             meld with previous commit message (like squash)
 
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
