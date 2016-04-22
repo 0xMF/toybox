@@ -272,6 +272,27 @@ have not yet found an aceptable workaround:
         #  - fixup:   use commit but discard this commit message and
         #             meld with previous commit message (like squash)
 
+  - HOWTO remove a single file from git's staging area but keep file new
+    changes (undo `git add` effectively).
+
+        git reset HEAD -- file
+
+  - HOWTO revert all new changes made to a single file and remove from
+    staging
+
+        git checkout HEAD -- file
+
+  - HOWTO compare [diffs between any two
+    commits](http://stackoverflow.com/questions/1191282/how-to-see-the-changes-between-two-commits-without-commits-in-between):
+
+        git checkout 123456
+        git cherry-pick -n abcdef
+        git diff --cached             # will show conflicts too
+
+        git diff 123456..abcdef       # includes all commits between
+
+        git diff 123455..abcdef -- path/to/file   # changes made to file
+
 <!--
 # vim: spell:ft=markdown:nonu:nowrap:colorcolumn=0
 -->
