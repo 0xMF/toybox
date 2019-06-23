@@ -1,0 +1,3 @@
+*** what provides on debian
+      - dpkg -V xinit
+      - dpkg -S /etc/X11/xinit/xserverrc
