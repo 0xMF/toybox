@@ -1,3 +1,7 @@
 *** what provides on debian
       - dpkg -V xinit
       - dpkg -S /etc/X11/xinit/xserverrc
+
+*** truncate long listing of filenames
+    Credit: https://unix.stackexchange.com/questions/112335/can-i-truncate-long-file-names-in-ls-listing
+      - ls | cut -c1-50 | column -c "${COLUMNS:-80}"
